@@ -8,6 +8,7 @@ export default function LanguageSwitcher() {
 
   const toggleLocale = () => {
     const next = locale === 'vi' ? 'en' : 'vi'
+    document.cookie = `NEXT_LOCALE=${next};path=/;max-age=31536000;SameSite=lax`
     const rest = window.location.pathname.slice(1 + locale.length)
     window.location.href = `/${next}${rest}`
   }
