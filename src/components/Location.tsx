@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 import ContactForm from './ContactForm'
 
 const MAPS_EMBED =
-  'https://maps.google.com/maps?q=K63%2F1+Ch%E1%BA%BF+Lan+Vi%C3%AAn%2C+Ho%C3%A0+Kh%C3%AA%2C+Thanh+Kh%C3%AA%2C+%C4%90%C3%A0+N%E1%BA%B5ng%2C+Vi%E1%BB%87t+Nam&output=embed&hl=vi&z=17'
+  'https://maps.google.com/maps?q=16.040982,108.246670&output=embed&hl=vi&z=17'
 
 const distanceTranslationKeys = [
   'beach',
