@@ -9,13 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink:       '#1E293B',  // slate-800 — clean neutral dark
+        ink:       '#053f43',  // deep teal-dark — primary text & dark sections
         cream:     '#FFFFFF',  // pure white
-        muted:     '#64748B',  // slate-500
-        gold:      '#0284C7',  // sky-600 — ocean blue, richer than bright cyan
-        'gold-lt': '#E0F2FE',  // sky-100
-        surface:   '#F1F5F9',  // slate-100 — clean light gray
-        dark:      '#0F172A',  // slate-900
+        muted:     '#4a7c74',  // mid teal-gray for secondary text
+        gold:      '#02ab82',  // bright teal-green — CTA, icons, accents
+        'gold-lt': '#d4f0e8',  // light teal tint
+        surface:   '#f4faf8',  // very light teal-tinted background
+        dark:      '#021f22',  // deepest teal-black
+        highlight: '#eee296',  // warm yellow — optional contrast accent
       },
       fontFamily: {
         serif: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],

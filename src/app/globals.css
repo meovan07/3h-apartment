@@ -8,7 +8,7 @@ html {
 
 body {
   background-color: #FFFFFF;
-  color: #1E293B;
+  color: #053f43;
   font-family: var(--font-inter), system-ui, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -19,14 +19,14 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #f4faf8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0284C7;
+  background: #02ab82;
   border-radius: 2px;
 }
 
 ::selection {
-  background-color: #0284C7;
+  background-color: #02ab82;
   color: #FFFFFF;
 }

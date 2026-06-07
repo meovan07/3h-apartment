@@ -33,7 +33,7 @@ function RoomCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.65, ease, delay }}
-      className="group flex flex-col bg-cream rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(15,23,42,0.07)] hover:shadow-[0_6px_28px_rgba(15,23,42,0.12)] transition-shadow duration-300"
+      className="group flex flex-col bg-cream rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(5,63,67,0.07)] hover:shadow-[0_6px_28px_rgba(5,63,67,0.12)] transition-shadow duration-300"
     >
       {/* Image */}
       <div className="relative h-[260px] bg-dark">
