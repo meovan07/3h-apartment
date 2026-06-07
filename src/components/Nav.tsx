@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import LanguageSwitcher from './LanguageSwitcher'
+import Logo from './Logo'
 
 export default function Nav() {
   const t = useTranslations('nav')
@@ -39,15 +40,7 @@ export default function Nav() {
     >
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
 
-        {/* Logo */}
-        <div className="flex flex-col leading-none">
-          <span className="font-serif text-[15px] tracking-[3px] text-ink font-medium">
-            3H APARTMENT
-          </span>
-          <span className="text-[8px] tracking-[2px] uppercase text-gold mt-0.5 font-sans">
-            Đà Nẵng · Vietnam
-          </span>
-        </div>
+        <Logo />
 
         {/* Center nav — desktop */}
         <nav className="hidden md:flex items-center gap-7">

@@ -62,7 +62,7 @@ export default function Location() {
             <div className="flex flex-col">
               {distances.map((d, i) => (
                 <motion.div
-                  key={d.place}
+                  key={i}
                   initial={{ opacity: 0, x: -16 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
