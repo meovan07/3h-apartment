@@ -29,7 +29,7 @@ export default function Stats() {
               i >= 2 ? 'border-t md:border-t-0' : ''
             }`}
           >
-            <span className="font-serif text-[42px] md:text-[48px] font-light text-ink leading-none tabular-nums">
+            <span className="font-serif text-[42px] md:text-[48px] font-normal text-ink leading-none tabular-nums">
               {s.value}
             </span>
             <span className="text-[10px] tracking-[2px] uppercase text-muted mt-2.5 font-medium">

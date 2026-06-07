@@ -33,7 +33,7 @@ export default function Amenities() {
               <span className="w-5 h-px bg-gold inline-block" />
               {t('eyebrow')}
             </span>
-            <h2 className="font-serif text-[40px] md:text-[48px] font-light text-cream leading-tight">
+            <h2 className="font-serif text-[40px] md:text-[48px] font-normal text-cream leading-tight">
               {t('title')}{' '}
               <em className="italic text-gold">{t('titleAccent')}</em>
             </h2>

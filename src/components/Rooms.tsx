@@ -51,7 +51,7 @@ function RoomCard({
       <div className={`flex flex-col flex-1 ${tall ? 'p-5' : 'p-3'}`}>
         <div className={`flex flex-col ${tall ? 'gap-3' : 'gap-1.5'}`}>
           <div>
-            <h3 className={`font-serif font-light text-ink ${tall ? 'text-xl' : 'text-[17px]'}`}>{name}</h3>
+            <h3 className={`font-serif font-normal text-ink ${tall ? 'text-xl' : 'text-[17px]'}`}>{name}</h3>
             <p className="text-[12px] text-muted mt-1 leading-relaxed">{desc}</p>
           </div>
           <div className="flex gap-3 text-[11px] text-muted">
@@ -72,7 +72,7 @@ function RoomCard({
         </div>
         <div className={`flex items-center justify-between border-t border-ink/10 ${tall ? 'pt-3 mt-4' : 'pt-2 mt-2'}`}>
           <div>
-            <span className="font-serif text-2xl font-light text-ink">
+            <span className="font-serif text-2xl font-normal text-ink">
               {formatVND(room.priceVND)}
             </span>
             <span className="text-[11px] text-muted ml-1">{t('per_night')}</span>
@@ -113,7 +113,7 @@ export default function Rooms() {
             <span className="w-5 h-px bg-gold inline-block" />
             {t('eyebrow')}
           </span>
-          <h2 className="font-serif text-[40px] md:text-[48px] font-light text-ink mt-3 leading-tight">
+          <h2 className="font-serif text-[40px] md:text-[48px] font-normal text-ink mt-3 leading-tight">
             {t('title')}{' '}
             <em className="italic text-gold">{t('titleAccent')}</em>
           </h2>
@@ -151,7 +151,7 @@ export default function Rooms() {
             <div className="p-5 flex flex-col flex-1">
               <div className="flex flex-col gap-3">
                 <div>
-                  <h3 className="font-serif text-xl font-light text-ink">{t('rooftop_name')}</h3>
+                  <h3 className="font-serif text-xl font-normal text-ink">{t('rooftop_name')}</h3>
                   <p className="text-[12px] text-muted mt-1 leading-relaxed">{t('rooftop_desc')}</p>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
@@ -166,7 +166,7 @@ export default function Rooms() {
                 </div>
               </div>
               <div className="mt-auto pt-3 border-t border-ink/10">
-                <span className="font-serif text-xl font-light text-gold">{t('rooftop_price')}</span>
+                <span className="font-serif text-xl font-normal text-gold">{t('rooftop_price')}</span>
                 <p className="text-[11px] text-muted mt-0.5">{t('rooftop_subtitle')}</p>
               </div>
             </div>

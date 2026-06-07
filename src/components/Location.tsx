@@ -36,7 +36,7 @@ export default function Location() {
             <span className="w-5 h-px bg-gold inline-block" />
             {t('eyebrow')}
           </span>
-          <h2 className="mt-3 font-serif text-[40px] md:text-[48px] font-light leading-tight text-ink">
+          <h2 className="mt-3 font-serif text-[40px] md:text-[48px] font-normal leading-tight text-ink">
             {t('title')} <em className="italic text-gold">{t('titleAccent')}</em>
           </h2>
         </motion.div>
@@ -108,7 +108,7 @@ export default function Location() {
             className="bg-surface p-8 md:p-10"
           >
             <div className="mb-8 border-b border-ink/10 pb-8">
-              <h3 className="mb-5 font-serif text-2xl font-light text-ink">{t('contact_title')}</h3>
+              <h3 className="mb-5 font-serif text-2xl font-normal text-ink">{t('contact_title')}</h3>
               <div className="flex flex-col gap-3.5">
                 <a
                   href={`tel:${t('phone').replace(/\s/g, '')}`}

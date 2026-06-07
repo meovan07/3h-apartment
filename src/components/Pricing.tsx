@@ -29,7 +29,7 @@ export default function Pricing() {
             <span className="w-5 h-px bg-gold inline-block" />
             {t('eyebrow')}
           </span>
-          <h2 className="font-serif text-[40px] md:text-[48px] font-light text-ink mt-3 leading-tight">
+          <h2 className="font-serif text-[40px] md:text-[48px] font-normal text-ink mt-3 leading-tight">
             {t('title')}{' '}
             <em className="italic text-gold">{t('titleAccent')}</em>
           </h2>
@@ -69,7 +69,7 @@ export default function Pricing() {
 
                 <div className="mb-8">
                   <span
-                    className={`font-serif text-[44px] font-light leading-none ${
+                    className={`font-serif text-[44px] font-normal leading-none ${
                       tier.hot ? 'text-cream' : 'text-ink'
                     }`}
                   >
