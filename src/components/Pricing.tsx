@@ -99,7 +99,7 @@ export default function Pricing() {
                   onClick={() =>
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                   }
-                  className={`text-[11px] font-semibold tracking-wide px-6 py-3.5 transition-colors duration-300 ${
+                  className={`rounded-lg text-[11px] font-semibold tracking-wide px-6 py-3.5 transition-colors duration-300 ${
                     tier.hot
                       ? 'bg-gold text-cream hover:bg-cream hover:text-ink'
                       : 'border border-ink text-ink hover:bg-ink hover:text-cream'

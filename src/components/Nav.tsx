@@ -61,7 +61,7 @@ export default function Nav() {
           <LanguageSwitcher />
           <button
             onClick={() => handleNav('contact')}
-            className="bg-gold text-cream text-[11px] font-semibold tracking-wide px-5 py-2.5 hover:bg-ink transition-colors duration-300"
+            className="bg-gold text-cream text-[11px] font-semibold tracking-wide px-5 py-2.5 rounded-lg hover:bg-ink transition-colors duration-300"
           >
             {t('book')}
           </button>
@@ -94,7 +94,7 @@ export default function Nav() {
           ))}
           <button
             onClick={() => handleNav('contact')}
-            className="bg-gold text-cream text-[11px] font-semibold tracking-wide px-6 py-3.5 w-full mt-2 hover:bg-ink transition-colors duration-300"
+            className="bg-gold text-cream text-[11px] font-semibold tracking-wide px-6 py-3.5 w-full mt-2 rounded-lg hover:bg-ink transition-colors duration-300"
           >
             {t('book')}
           </button>

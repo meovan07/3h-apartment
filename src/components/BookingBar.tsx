@@ -81,7 +81,7 @@ export default function BookingBar() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setGuests(g => Math.max(1, g - 1))}
-                className="flex h-7 w-7 items-center justify-center border border-cream/20 text-cream transition-colors hover:bg-cream/10"
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-cream/20 text-cream transition-colors hover:bg-cream/10"
               >
                 <span className="text-sm leading-none">−</span>
               </button>
@@ -90,7 +90,7 @@ export default function BookingBar() {
               </span>
               <button
                 onClick={() => setGuests(g => Math.min(4, g + 1))}
-                className="flex h-7 w-7 items-center justify-center border border-cream/20 text-cream transition-colors hover:bg-cream/10"
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-cream/20 text-cream transition-colors hover:bg-cream/10"
               >
                 <span className="text-sm leading-none">+</span>
               </button>
@@ -106,7 +106,7 @@ export default function BookingBar() {
                 )
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }}
-              className="w-full bg-gold px-8 py-3.5 text-[11px] font-semibold tracking-wide text-cream transition-colors duration-300 hover:bg-cream hover:text-ink md:w-auto"
+              className="w-full rounded-lg bg-gold px-8 py-3.5 text-[11px] font-semibold tracking-wide text-cream transition-colors duration-300 hover:bg-cream hover:text-ink md:w-auto"
             >
               {t('cta')}
             </button>

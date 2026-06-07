@@ -2,7 +2,7 @@ export default function Logo() {
   return (
     <div className="flex items-center gap-2.5 select-none">
       {/* Square mark */}
-      <div className="w-8 h-8 bg-gold flex items-center justify-center shrink-0">
+      <div className="w-8 h-8 bg-gold rounded-lg flex items-center justify-center shrink-0">
         <span
           className="font-serif text-cream font-semibold leading-none"
           style={{ fontSize: '13px', letterSpacing: '-0.02em' }}

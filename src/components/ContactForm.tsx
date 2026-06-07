@@ -153,7 +153,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isLoading}
-        className="flex items-center justify-center gap-2 bg-gold text-cream text-[11px] font-semibold tracking-wide px-6 py-4 hover:bg-ink transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="flex items-center justify-center gap-2 bg-gold text-cream text-[11px] font-semibold tracking-wide px-6 py-4 rounded-lg hover:bg-ink transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isLoading ? (
           t('submitting')

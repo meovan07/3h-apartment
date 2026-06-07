@@ -83,7 +83,7 @@ export default function Location() {
             </div>
 
             {/* Map */}
-            <div className="relative h-[260px] w-full overflow-hidden border border-ink/10">
+            <div className="relative h-[260px] w-full overflow-hidden rounded-xl border border-ink/10">
               <iframe
                 src={MAPS_EMBED}
                 width="100%"
@@ -105,7 +105,7 @@ export default function Location() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="bg-surface p-8 md:p-10"
+            className="bg-surface p-8 md:p-10 rounded-2xl"
           >
             <div className="mb-8 border-b border-ink/10 pb-8">
               <h3 className="mb-5 font-serif text-2xl font-normal text-ink">{t('contact_title')}</h3>

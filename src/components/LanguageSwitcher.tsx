@@ -14,7 +14,7 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLocale}
-      className="inline-flex items-center justify-center min-w-[42px] h-8 text-[11px] font-semibold tracking-wide text-muted hover:text-ink border border-ink/20 hover:border-ink/40 px-3 transition-colors duration-200"
+      className="inline-flex items-center justify-center min-w-[42px] h-8 text-[11px] font-semibold tracking-wide text-muted hover:text-ink border border-ink/20 hover:border-ink/40 px-3 rounded-lg transition-colors duration-200"
       title={locale === 'vi' ? 'Switch to English' : 'Chuyển sang Tiếng Việt'}
     >
       {locale === 'vi' ? 'EN' : 'VI'}

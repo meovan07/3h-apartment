@@ -33,10 +33,10 @@ function RoomCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.65, ease, delay }}
-      className="group flex flex-col bg-cream shadow-[0_2px_16px_rgba(28,25,23,0.07)] hover:shadow-[0_6px_28px_rgba(28,25,23,0.12)] transition-shadow duration-300"
+      className="group flex flex-col bg-cream rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(28,25,23,0.07)] hover:shadow-[0_6px_28px_rgba(28,25,23,0.12)] transition-shadow duration-300"
     >
       {/* Image */}
-      <div className="relative h-[260px] overflow-hidden bg-dark">
+      <div className="relative h-[260px] bg-dark">
         <Image
           src={room.imgSrc}
           alt={name}
@@ -84,7 +84,7 @@ function RoomCard({
           {tags.map((tag) => (
             <span
               key={tag}
-              className="text-[9px] tracking-wide uppercase text-muted border border-ink/10 px-2.5 py-1"
+              className="text-[9px] tracking-wide uppercase text-muted border border-ink/10 px-2.5 py-1 rounded-full"
             >
               {tag}
             </span>
@@ -95,7 +95,7 @@ function RoomCard({
         <div className="mt-auto pt-2">
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="flex items-center gap-2 bg-ink text-cream text-[11px] font-semibold tracking-wide px-6 py-3 hover:bg-gold transition-colors duration-300 w-full justify-center"
+            className="flex items-center gap-2 bg-ink text-cream text-[11px] font-semibold tracking-wide px-6 py-3 rounded-lg hover:bg-gold transition-colors duration-300 w-full justify-center"
           >
             {t('book_now')} <ArrowRight size={12} />
           </button>

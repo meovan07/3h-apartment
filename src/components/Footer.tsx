@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import Logo from './Logo'
 
 export default function Footer() {
   const t = useTranslations('nav')
@@ -13,7 +14,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-ink/10 bg-surface">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-        <span className="font-serif text-[15px] tracking-[3px] text-ink">3H APARTMENT</span>
+        <Logo />
 
         <nav className="flex items-center gap-6">
           {(['rooms', 'amenities', 'pricing', 'location'] as const).map((id) => (

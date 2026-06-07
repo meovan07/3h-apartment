@@ -220,13 +220,13 @@ export default function Hero() {
             >
               <button
                 onClick={() => document.getElementById('rooms')?.scrollIntoView({ behavior: 'smooth' })}
-                className="flex items-center justify-center gap-2 bg-gold text-cream text-[11px] font-semibold tracking-wide px-7 py-3.5 hover:bg-ink transition-colors duration-300 w-full sm:w-auto"
+                className="flex items-center justify-center gap-2 bg-gold text-cream text-[11px] font-semibold tracking-wide px-7 py-3.5 rounded-lg hover:bg-ink transition-colors duration-300 w-full sm:w-auto"
               >
                 {t('cta_rooms')} <ArrowRight size={13} />
               </button>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="flex items-center justify-center gap-2 border border-ink/20 text-ink text-[11px] font-medium tracking-wide px-7 py-3.5 hover:bg-ink hover:text-cream hover:border-transparent transition-colors duration-300 w-full sm:w-auto"
+                className="flex items-center justify-center gap-2 border border-ink/20 text-ink text-[11px] font-medium tracking-wide px-7 py-3.5 rounded-lg hover:bg-ink hover:text-cream hover:border-transparent transition-colors duration-300 w-full sm:w-auto"
               >
                 {t('cta_contact')}
               </button>

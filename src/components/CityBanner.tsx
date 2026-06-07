@@ -68,7 +68,7 @@ export default function CityBanner() {
               onClick={() =>
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="px-8 py-4 text-[11px] font-semibold tracking-wide bg-gold text-cream transition-colors duration-300 hover:bg-cream hover:text-ink"
+              className="rounded-lg px-8 py-4 text-[11px] font-semibold tracking-wide bg-gold text-cream transition-colors duration-300 hover:bg-cream hover:text-ink"
             >
               {t('cta')}
             </button>

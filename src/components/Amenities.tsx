@@ -54,8 +54,8 @@ export default function Amenities() {
                 transition={{ duration: 0.55, ease, delay: (i % 3) * 0.08 }}
                 className="flex items-start gap-5"
               >
-                <div className="mt-0.5 shrink-0">
-                  <Icon size={34} className="text-gold" strokeWidth={1.25} />
+                <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/10">
+                  <Icon size={22} className="text-gold" strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="font-serif text-[17px] font-normal text-cream mb-1.5 leading-snug">
@@ -78,7 +78,7 @@ export default function Amenities() {
         >
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="border border-cream/30 px-8 py-3.5 text-[11px] font-semibold tracking-wide text-cream transition-colors duration-300 hover:bg-cream hover:text-ink"
+            className="border border-cream/30 px-8 py-3.5 rounded-lg text-[11px] font-semibold tracking-wide text-cream transition-colors duration-300 hover:bg-cream hover:text-ink"
           >
             {t('cta')}
           </button>
