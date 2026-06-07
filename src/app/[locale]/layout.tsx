@@ -65,7 +65,6 @@ export async function generateMetadata({
       description: isVi
         ? 'Studio riêng tư từ 500.000 ₫/đêm. Cách biển Mỹ Khê 1 km, tiện nghi đầy đủ, gia đình quản lý.'
         : 'Private studios from 500,000 VND/night. 1 km from My Khe Beach, fully equipped, family-run.',
-      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: '3H Apartment Da Nang' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -73,7 +72,6 @@ export async function generateMetadata({
       description: isVi
         ? 'Studio riêng tư từ 500.000 ₫/đêm. Cách biển Mỹ Khê 1 km.'
         : 'Private studios from 500,000 VND/night. 1 km from My Khe Beach.',
-      images: ['/og-image.jpg'],
     },
     robots: { index: true, follow: true },
   }
