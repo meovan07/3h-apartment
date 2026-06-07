@@ -35,7 +35,7 @@ export default function Pricing() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl overflow-hidden shadow-[0_2px_24px_rgba(12,31,53,0.08)] border border-ink/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl overflow-hidden shadow-[0_2px_24px_rgba(15,23,42,0.08)] border border-ink/10">
           {pricingTiers.map((tier, i) => {
             const { label, floor, units, features } = tierTranslations[tier.id as 1 | 2 | 3]
 

@@ -9,13 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink:       '#0c1f35',  // navy dark — trust, premium
-        cream:     '#F8FAFC',  // cool near-white
-        muted:     '#64748B',  // slate-500 — readable secondary text
-        gold:      '#0891b2',  // cyan primary — modern, clean
-        'gold-lt': '#E0F2FE',  // sky-100 — light cyan tint
-        surface:   '#EFF6FF',  // blue-50 — subtle tinted surface
-        dark:      '#060F1A',  // deep navy
+        ink:       '#1E293B',  // slate-800 — clean neutral dark
+        cream:     '#FFFFFF',  // pure white
+        muted:     '#64748B',  // slate-500
+        gold:      '#0284C7',  // sky-600 — ocean blue, richer than bright cyan
+        'gold-lt': '#E0F2FE',  // sky-100
+        surface:   '#F1F5F9',  // slate-100 — clean light gray
+        dark:      '#0F172A',  // slate-900
       },
       fontFamily: {
         serif: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],

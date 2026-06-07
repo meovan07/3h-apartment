@@ -19,7 +19,7 @@ export default function Amenities() {
   const items = t.raw('items') as Array<{ name: string; desc: string }>
 
   return (
-    <section id="amenities" className="bg-ink py-24 text-cream">
+    <section id="amenities" className="bg-surface py-24">
       <div className="mx-auto max-w-screen-2xl px-6 md:px-12">
 
         {/* Section heading */}
@@ -34,15 +34,15 @@ export default function Amenities() {
             <span className="inline-block h-px w-5 bg-gold" />
             {t('eyebrow')}
           </span>
-          <h2 className="mt-3 font-serif text-[40px] font-normal leading-tight text-cream md:text-[48px]">
+          <h2 className="mt-3 font-serif text-[40px] font-normal leading-tight text-ink md:text-[48px]">
             {t('title')}{' '}
             <em className="italic text-gold">{t('titleAccent')}</em>
           </h2>
-          <p className="mt-4 max-w-md text-[13px] leading-relaxed text-cream/55">{t('body')}</p>
+          <p className="mt-4 max-w-md text-[13px] leading-relaxed text-muted">{t('body')}</p>
         </motion.div>
 
-        {/* 3-column amenity grid — icon left, text right */}
-        <div className="grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-3">
+        {/* 3-column amenity grid */}
+        <div className="grid grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-3">
           {items.map((item, i) => {
             const Icon = iconMap[amenityIcons[i]] ?? Wifi
             return (
@@ -52,16 +52,16 @@ export default function Amenities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.55, ease, delay: (i % 3) * 0.08 }}
-                className="flex items-start gap-5"
+                className="flex items-start gap-4 bg-cream rounded-2xl p-5 shadow-[0_1px_4px_rgba(15,23,42,0.06)]"
               >
-                <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/10">
-                  <Icon size={22} className="text-gold" strokeWidth={1.5} />
+                <div className="shrink-0 flex h-11 w-11 items-center justify-center rounded-xl bg-gold/10">
+                  <Icon size={20} className="text-gold" strokeWidth={1.75} />
                 </div>
                 <div>
-                  <h3 className="font-serif text-[17px] font-normal text-cream mb-1.5 leading-snug">
+                  <h3 className="font-serif text-[15px] font-semibold text-ink mb-1 leading-snug">
                     {item.name}
                   </h3>
-                  <p className="text-[12px] leading-relaxed text-cream/50">{item.desc}</p>
+                  <p className="text-[12px] leading-relaxed text-muted">{item.desc}</p>
                 </div>
               </motion.div>
             )
@@ -74,11 +74,11 @@ export default function Amenities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, ease, delay: 0.2 }}
-          className="mt-16 border-t border-cream/10 pt-10"
+          className="mt-14 border-t border-ink/10 pt-10"
         >
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="border border-cream/30 px-8 py-3.5 rounded-lg text-[11px] font-semibold tracking-wide text-cream transition-colors duration-300 hover:bg-cream hover:text-ink"
+            className="bg-gold px-8 py-3.5 rounded-lg text-[11px] font-semibold tracking-wide text-cream transition-colors duration-300 hover:bg-ink"
           >
             {t('cta')}
           </button>
