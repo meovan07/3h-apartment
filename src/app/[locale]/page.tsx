@@ -5,6 +5,7 @@ import Stats from '@/components/Stats'
 import Rooms from '@/components/Rooms'
 import Amenities from '@/components/Amenities'
 import Pricing from '@/components/Pricing'
+import CityBanner from '@/components/CityBanner'
 import Location from '@/components/Location'
 import Footer from '@/components/Footer'
 
@@ -27,6 +28,7 @@ export default async function Home({
       <Rooms />
       <Amenities />
       <Pricing />
+      <CityBanner />
       <Location />
       <Footer />
     </main>

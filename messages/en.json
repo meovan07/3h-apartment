@@ -94,15 +94,22 @@
     "tier3_units": "Units 7–14",
     "tier3_features": ["27 m² private studio", "Private bathroom", "Kitchenette", "Best city views"]
   },
+  "citybanner": {
+    "eyebrow": "Đà Nẵng · Vietnam",
+    "title": "Wake up to",
+    "titleAccent": "ocean air.",
+    "body": "Just 1 km from Mỹ Khê Beach — one of Asia's most celebrated coastal destinations. The sun, the sea, and the city skyline, all within reach.",
+    "cta": "Book your stay"
+  },
   "location": {
     "eyebrow": "Find us",
     "title": "Prime",
     "titleAccent": "location.",
-    "address": "K63/1 Chế Lan Viên,\nPhường Hoà Khê, Quận Thanh Khê, TP. Đà Nẵng",
+    "address": "K63/1 Chế Lan Viên,\nPhường Mỹ An, Quận Ngũ Hành Sơn, TP. Đà Nẵng",
     "contact_title": "Contact us",
     "phone": "+84 xxx xxx xxx",
     "facebook": "fb.com/3Hapartment",
-    "address_short": "K63/1 Chế Lan Viên, Hoà Khê, Thanh Khê, Đà Nẵng",
+    "address_short": "K63/1 Chế Lan Viên, Mỹ An, Ngũ Hành Sơn, Đà Nẵng",
     "form_eyebrow": "Send a booking enquiry"
   },
   "form": {

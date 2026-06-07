@@ -94,6 +94,13 @@
     "tier3_units": "Phòng 7–14",
     "tier3_features": ["Studio riêng 27 m²", "Phòng tắm riêng", "Bếp mini", "View đẹp nhất"]
   },
+  "citybanner": {
+    "eyebrow": "Đà Nẵng · Việt Nam",
+    "title": "Thức dậy cùng",
+    "titleAccent": "gió biển.",
+    "body": "Chỉ 1 km đến bãi biển Mỹ Khê — một trong những bờ biển đẹp nhất châu Á. Ánh nắng, mặt biển và phố thị Đà Nẵng, tất cả trong tầm tay.",
+    "cta": "Đặt phòng ngay"
+  },
   "location": {
     "eyebrow": "Tìm chúng tôi",
     "title": "Vị trí",
