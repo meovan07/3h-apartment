@@ -96,7 +96,7 @@
     "cta": "Enquire now",
     "items": [
       { "name": "WiFi", "desc": "High-speed fibre in every room" },
-      { "name": "Air conditioning", "desc": "Individual unit per room" },
+      { "name": "Air conditioning", "desc": "Inverter split-type, remote-controlled" },
       { "name": "Elevator", "desc": "Serving all 4 floors" },
       { "name": "Motorbike parking", "desc": "Covered ground-floor garage, motorbike & bicycle only" },
       { "name": "Kitchenette", "desc": "Fridge, kettle & cooking basics" },
