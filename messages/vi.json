@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "rooms": "Phòng",
+    "amenities": "Tiện nghi",
+    "pricing": "Giá thuê",
+    "location": "Vị trí",
+    "contact": "Liên hệ",
+    "book": "Đặt phòng"
+  },
+  "hero": {
+    "eyebrow": "Cách biển Mỹ Khê 1 km",
+    "headline": "Nơi nghỉ ngơi bên",
+    "headlineAccent": "biển cả.",
+    "body": "14 phòng studio riêng tư, mỗi phòng 27 m², tại phường Mỹ An, quận Ngũ Hành Sơn. Căn hộ gia đình, tỉ mỉ từng chi tiết.",
+    "cta_rooms": "Xem tất cả phòng",
+    "cta_contact": "Liên hệ"
+  },
+  "stats": {
+    "units_value": "14",
+    "units_label": "Phòng studio",
+    "size_value": "27 m²",
+    "size_label": "Mỗi phòng",
+    "dist_value": "1 km",
+    "dist_label": "Ra biển",
+    "rating_value": "4.9 ★",
+    "rating_label": "Đánh giá khách"
+  },
+  "search": {
+    "checkin": "Nhận phòng",
+    "checkout": "Trả phòng",
+    "guests": "Số khách",
+    "floor": "Tầng mong muốn",
+    "button": "Tìm phòng",
+    "floor_none": "Không ưu tiên",
+    "floor_1": "Tầng 1 (Trệt)",
+    "floor_2": "Tầng 2 (Giữa)",
+    "floor_3": "Tầng 3–4 (Cao)"
+  },
+  "rooms": {
+    "eyebrow": "Không gian của chúng tôi",
+    "title": "Studio &",
+    "titleAccent": "phòng nghỉ",
+    "book_now": "Đặt ngay",
+    "per_night": "/ đêm",
+    "guests": "khách",
+    "units": "Phòng",
+    "rooftop_name": "Sân thượng",
+    "rooftop_desc": "Không gian mở dùng chung cho tất cả khách. View thành phố, khu phơi đồ, lý tưởng để thưởng thức cà phê buổi sáng.",
+    "rooftop_tags": ["Ngoài trời", "View thành phố", "Dùng chung", "Miễn phí"],
+    "rooftop_price": "Miễn phí",
+    "rooftop_subtitle": "Dành cho tất cả khách lưu trú"
+  },
+  "amenities": {
+    "eyebrow": "Tiện ích",
+    "title": "Mọi thứ bạn",
+    "titleAccent": "cần.",
+    "body": "Mỗi phòng studio tại 3H Apartment đều được trang bị đầy đủ để bạn có thể vào ở ngay. Từ WiFi tốc độ cao đến bếp mini riêng — chúng tôi đã chuẩn bị chu đáo.",
+    "cta": "Liên hệ ngay"
+  },
+  "pricing": {
+    "eyebrow": "Bảng giá",
+    "title": "Giá rõ ràng,",
+    "titleAccent": "không phụ thu.",
+    "popular": "Phổ biến nhất",
+    "per_night": "/ đêm",
+    "cta": "Đặt phòng này",
+    "note": "Giá mỗi phòng mỗi đêm · Bao gồm tất cả tiện nghi · Liên hệ để biết giá thuê theo tháng"
+  },
+  "location": {
+    "eyebrow": "Tìm chúng tôi",
+    "title": "Vị trí",
+    "titleAccent": "đắc địa.",
+    "address": "K63/1 Chế Lan Viên,\nPhường Hoà Khê, Quận Thanh Khê, TP. Đà Nẵng",
+    "contact_title": "Liên hệ",
+    "phone": "+84 xxx xxx xxx",
+    "facebook": "fb.com/3Hapartment",
+    "address_short": "K63/1 Chế Lan Viên, Hoà Khê, Thanh Khê, Đà Nẵng",
+    "form_eyebrow": "Gửi yêu cầu đặt phòng"
+  },
+  "form": {
+    "name": "Họ và tên",
+    "name_placeholder": "Nguyễn Văn A",
+    "phone": "Điện thoại / Zalo",
+    "phone_placeholder": "+84 xxx xxx xxx",
+    "checkin": "Nhận phòng",
+    "checkout": "Trả phòng",
+    "floor": "Tầng ưu tiên",
+    "message": "Lời nhắn",
+    "message_placeholder": "Câu hỏi hoặc yêu cầu đặc biệt…",
+    "submit": "Gửi yêu cầu",
+    "submitting": "Đang gửi…",
+    "success": "Cảm ơn bạn! Chúng tôi sẽ phản hồi trong vòng 24 giờ.",
+    "error": "Có lỗi xảy ra. Vui lòng gọi điện hoặc nhắn tin trực tiếp cho chúng tôi.",
+    "required": "*",
+    "floor_none": "Không ưu tiên",
+    "floor_1": "Tầng 1 — Trệt (500K ₫)",
+    "floor_2": "Tầng 2 — Giữa (550K ₫)",
+    "floor_3": "Tầng 3–4 — Cao (600K ₫)"
+  },
+  "footer": {
+    "copyright": "© 2025 · Đỗ Mậu Biển & Phạm Thị Thanh Hồng · Đà Nẵng"
+  },
+  "distances": {
+    "beach": "Biển Mỹ Khê",
+    "restaurants": "Nhà hàng",
+    "dragon": "Cầu Rồng",
+    "marble": "Ngũ Hành Sơn",
+    "airport": "Sân bay Đà Nẵng",
+    "hoian": "Hội An"
+  }
+}

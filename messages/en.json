@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "rooms": "Rooms",
+    "amenities": "Amenities",
+    "pricing": "Pricing",
+    "location": "Location",
+    "contact": "Contact",
+    "book": "Book a room"
+  },
+  "hero": {
+    "eyebrow": "1 km from My Khe Beach",
+    "headline": "A place to rest by the",
+    "headlineAccent": "ocean.",
+    "body": "14 private studios, each 27 m², in the heart of Mỹ An ward, Ngũ Hành Sơn district. Family-run with every detail considered.",
+    "cta_rooms": "View all rooms",
+    "cta_contact": "Contact us"
+  },
+  "stats": {
+    "units_value": "14",
+    "units_label": "Studio units",
+    "size_value": "27 m²",
+    "size_label": "Each studio",
+    "dist_value": "1 km",
+    "dist_label": "To the beach",
+    "rating_value": "4.9 ★",
+    "rating_label": "Guest rating"
+  },
+  "search": {
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "guests": "Guests",
+    "floor": "Floor preference",
+    "button": "Search rooms",
+    "floor_none": "No preference",
+    "floor_1": "Floor 1 (Ground)",
+    "floor_2": "Floor 2 (Mid)",
+    "floor_3": "Floors 3–4 (Upper)"
+  },
+  "rooms": {
+    "eyebrow": "Our spaces",
+    "title": "Studios &",
+    "titleAccent": "rooms",
+    "book_now": "Book now",
+    "per_night": "/ night",
+    "guests": "guests",
+    "units": "Units",
+    "rooftop_name": "Rooftop terrace",
+    "rooftop_desc": "Open-air sân thượng shared by all guests. City views, drying area, and a perfect spot for sunrise coffee.",
+    "rooftop_tags": ["Open-air", "City views", "Shared space", "Free access"],
+    "rooftop_price": "Complimentary",
+    "rooftop_subtitle": "Available to all guests"
+  },
+  "amenities": {
+    "eyebrow": "Facilities",
+    "title": "Everything you",
+    "titleAccent": "need.",
+    "body": "Each studio at 3H Apartment comes fully equipped so you can settle in immediately. From high-speed WiFi to a private kitchenette, we've thought through the details so you don't have to.",
+    "cta": "Enquire now"
+  },
+  "pricing": {
+    "eyebrow": "Rates",
+    "title": "Simple, transparent",
+    "titleAccent": "pricing.",
+    "popular": "Most popular",
+    "per_night": "/ night",
+    "cta": "Book this room",
+    "note": "Prices are per room per night · Includes all facilities · Contact us for monthly rates"
+  },
+  "location": {
+    "eyebrow": "Find us",
+    "title": "Prime",
+    "titleAccent": "location.",
+    "address": "K63/1 Chế Lan Viên,\nPhường Hoà Khê, Quận Thanh Khê, TP. Đà Nẵng",
+    "contact_title": "Contact us",
+    "phone": "+84 xxx xxx xxx",
+    "facebook": "fb.com/3Hapartment",
+    "address_short": "K63/1 Chế Lan Viên, Hoà Khê, Thanh Khê, Đà Nẵng",
+    "form_eyebrow": "Send a booking enquiry"
+  },
+  "form": {
+    "name": "Full name",
+    "name_placeholder": "Nguyễn Văn A",
+    "phone": "Phone / Zalo",
+    "phone_placeholder": "+84 xxx xxx xxx",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "floor": "Preferred floor",
+    "message": "Message",
+    "message_placeholder": "Any questions or special requests…",
+    "submit": "Send enquiry",
+    "submitting": "Sending…",
+    "success": "Thank you! We'll be in touch within 24 hours.",
+    "error": "Something went wrong. Please call or message us directly.",
+    "required": "*",
+    "floor_none": "No preference",
+    "floor_1": "Floor 1 — Ground (500K ₫)",
+    "floor_2": "Floor 2 — Mid (550K ₫)",
+    "floor_3": "Floors 3–4 — Upper (600K ₫)"
+  },
+  "footer": {
+    "copyright": "© 2025 · Đỗ Mậu Biển & Phạm Thị Thanh Hồng · Đà Nẵng"
+  },
+  "distances": {
+    "beach": "My Khe Beach",
+    "restaurants": "Restaurants",
+    "dragon": "Dragon Bridge",
+    "marble": "Marble Mountains",
+    "airport": "Da Nang Airport",
+    "hoian": "Hội An"
+  }
+}

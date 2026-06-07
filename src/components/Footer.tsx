@@ -1,0 +1,36 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
+
+export default function Footer() {
+  const t = useTranslations('nav')
+  const tFooter = useTranslations('footer')
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  return (
+    <footer className="border-t border-ink/10">
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+        <span className="font-serif text-base tracking-widest text-ink">3H APARTMENT</span>
+
+        <nav className="flex items-center gap-6">
+          {['rooms', 'amenities', 'pricing', 'location'].map((id) => (
+            <button
+              key={id}
+              onClick={() => scrollTo(id)}
+              className="text-[9px] tracking-widest uppercase text-muted hover:text-ink transition-colors duration-200"
+            >
+              {t(id as 'rooms' | 'amenities' | 'pricing' | 'location')}
+            </button>
+          ))}
+        </nav>
+
+        <p className="text-[9px] text-muted text-center md:text-right">
+          {tFooter('copyright')}
+        </p>
+      </div>
+    </footer>
+  )
+}
