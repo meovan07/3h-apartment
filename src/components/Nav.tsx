@@ -40,7 +40,12 @@ export default function Nav() {
     >
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
 
-        <Logo />
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Back to top"
+        >
+          <Logo />
+        </button>
 
         {/* Center nav — desktop */}
         <nav className="hidden md:flex items-center gap-7">
