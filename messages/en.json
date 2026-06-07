@@ -5,7 +5,7 @@
     "pricing": "Pricing",
     "location": "Location",
     "contact": "Contact",
-    "book": "Book a room"
+    "book": "Book now"
   },
   "hero": {
     "eyebrow": "1 km from My Khe Beach",
@@ -45,19 +45,22 @@
         "quote": "Perfect location — just 5 minutes on foot to Mỹ Khê beach. The studio was spotless, quiet, and had everything we needed for the full week.",
         "author": "Sarah T.",
         "country": "Australia",
-        "date": "March 2025"
+        "date": "March 2025",
+        "source": "airbnb"
       },
       {
         "quote": "Great value and an incredibly responsive host. Modern room, rock-solid WiFi, and the rooftop terrace is a lovely bonus at the end of the day.",
         "author": "Marc D.",
         "country": "France",
-        "date": "February 2025"
+        "date": "February 2025",
+        "source": "google"
       },
       {
         "quote": "Stayed a full month working remotely. Reliable internet, a practical kitchenette, and the neighbourhood feels safe and local.",
         "author": "James K.",
         "country": "United Kingdom",
-        "date": "January 2025"
+        "date": "January 2025",
+        "source": "booking"
       }
     ]
   },
@@ -111,7 +114,7 @@
     "titleAccent": "pricing.",
     "popular": "Most popular",
     "per_night": "/ night",
-    "cta": "Book this room",
+    "cta": "Book now",
     "note": "Prices are per room per night · Includes all facilities · Contact us for monthly rates",
     "tier1_label": "Ground floor",
     "tier1_floor": "Floor 1",
@@ -169,7 +172,6 @@
   },
   "distances": {
     "beach": "My Khe Beach",
-    "restaurants": "Restaurants",
     "dragon": "Dragon Bridge",
     "marble": "Marble Mountains",
     "airport": "Da Nang Airport",

@@ -11,7 +11,6 @@ const MAPS_EMBED =
 
 const distanceTranslationKeys = [
   'beach',
-  'restaurants',
   'dragon',
   'marble',
   'airport',
@@ -77,7 +76,10 @@ export default function Location() {
                       {tDist(distanceTranslationKeys[i])}
                     </span>
                   </div>
-                  <span className="text-[12px] font-medium text-muted">{d.dist}</span>
+                  <div className="text-right">
+                    <span className="text-[12px] font-medium text-muted">{d.dist}</span>
+                    <p className="text-[10px] text-muted/60 mt-0.5">{d.time}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>

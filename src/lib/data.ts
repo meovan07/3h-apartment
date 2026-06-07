@@ -56,13 +56,13 @@ export const pricingTiers: PricingTier[] = [
 
 export interface Distance {
   dist: string
+  time: string
 }
 
 export const distances: Distance[] = [
-  { dist: '1 km' },
-  { dist: '100 m' },
-  { dist: '3.5 km' },
-  { dist: '4 km' },
-  { dist: '6 km' },
-  { dist: '22 km' },
+  { dist: '1 km',   time: '10 min walk · 3 min bike' },
+  { dist: '3.5 km', time: '8 min drive · 15 min bike' },
+  { dist: '4 km',   time: '10 min drive · 15 min bike' },
+  { dist: '6 km',   time: '15 min drive' },
+  { dist: '22 km',  time: '35 min drive' },
 ]

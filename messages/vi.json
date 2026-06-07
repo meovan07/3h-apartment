@@ -45,19 +45,22 @@
         "quote": "Vị trí cực kỳ thuận tiện — đi bộ 5 phút ra biển Mỹ Khê. Phòng sạch sẽ, yên tĩnh và đầy đủ tiện nghi cho cả tuần.",
         "author": "Sarah T.",
         "country": "Úc",
-        "date": "Tháng 3, 2025"
+        "date": "Tháng 3, 2025",
+        "source": "airbnb"
       },
       {
         "quote": "Giá rất hợp lý, chủ nhà phản hồi siêu nhanh. Phòng hiện đại, WiFi ổn định, sân thượng là điểm cộng tuyệt vời.",
         "author": "Marc D.",
         "country": "Pháp",
-        "date": "Tháng 2, 2025"
+        "date": "Tháng 2, 2025",
+        "source": "google"
       },
       {
         "quote": "Lưu trú cả tháng để làm việc từ xa. Kết nối internet ổn định, bếp tiện dụng, khu phố yên bình và an toàn.",
         "author": "James K.",
         "country": "Anh",
-        "date": "Tháng 1, 2025"
+        "date": "Tháng 1, 2025",
+        "source": "booking"
       }
     ]
   },
@@ -111,7 +114,7 @@
     "titleAccent": "không phụ thu.",
     "popular": "Phổ biến nhất",
     "per_night": "/ đêm",
-    "cta": "Đặt phòng này",
+    "cta": "Đặt ngay",
     "note": "Giá mỗi phòng mỗi đêm · Bao gồm tất cả tiện nghi · Liên hệ để biết giá thuê theo tháng",
     "tier1_label": "Tầng trệt",
     "tier1_floor": "Tầng 1",
@@ -169,7 +172,6 @@
   },
   "distances": {
     "beach": "Biển Mỹ Khê",
-    "restaurants": "Nhà hàng",
     "dragon": "Cầu Rồng",
     "marble": "Ngũ Hành Sơn",
     "airport": "Sân bay Đà Nẵng",

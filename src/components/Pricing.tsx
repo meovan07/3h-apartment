@@ -46,7 +46,9 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
-                className={`relative flex flex-col p-8 bg-cream ${
+                className={`relative flex flex-col p-8 ${
+                  tier.hot ? 'bg-gold/[0.04]' : 'bg-cream'
+                } ${
                   i < pricingTiers.length - 1 ? 'border-b md:border-b-0 md:border-r border-ink/12' : ''
                 }`}
               >

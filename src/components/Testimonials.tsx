@@ -5,7 +5,23 @@ import { useTranslations } from 'next-intl'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
-type Review = { quote: string; author: string; country: string; date: string }
+type Review = { quote: string; author: string; country: string; date: string; source: 'google' | 'airbnb' | 'booking' }
+
+const platformMeta = {
+  google:  { name: 'Google',      color: '#4285F4', dot: '#4285F4' },
+  airbnb:  { name: 'Airbnb',      color: '#FF385C', dot: '#FF385C' },
+  booking: { name: 'Booking.com', color: '#003580', dot: '#003580' },
+} as const
+
+function PlatformBadge({ source }: { source: Review['source'] }) {
+  const p = platformMeta[source]
+  return (
+    <div className="flex items-center gap-1.5">
+      <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: p.dot }} />
+      <span className="text-[10px] font-semibold" style={{ color: p.color }}>{p.name}</span>
+    </div>
+  )
+}
 
 export default function Testimonials() {
   const t = useTranslations('testimonials')
@@ -57,9 +73,12 @@ export default function Testimonials() {
               </p>
 
               {/* Author */}
-              <div className="border-t border-ink/10 pt-4">
-                <p className="text-[12px] font-semibold text-ink">{review.author}</p>
-                <p className="mt-0.5 text-[11px] text-muted">{review.country} · {review.date}</p>
+              <div className="border-t border-ink/10 pt-4 flex items-end justify-between gap-3">
+                <div>
+                  <p className="text-[12px] font-semibold text-ink">{review.author}</p>
+                  <p className="mt-0.5 text-[11px] text-muted">{review.country} · {review.date}</p>
+                </div>
+                <PlatformBadge source={review.source} />
               </div>
             </motion.div>
           ))}
