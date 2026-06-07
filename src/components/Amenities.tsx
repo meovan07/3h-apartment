@@ -51,7 +51,7 @@ export default function Amenities() {
           </motion.div>
 
           {/* Right — 2×4 grid from translations */}
-          <div className="grid grid-cols-2 border border-cream/10">
+          <div className="grid grid-cols-2 rounded-2xl overflow-hidden border border-cream/10">
             {items.map((item, i) => {
               const Icon = iconMap[amenityIcons[i]] ?? Wifi
               return (

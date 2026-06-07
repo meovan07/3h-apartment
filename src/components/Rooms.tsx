@@ -33,7 +33,7 @@ function RoomCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}
-      className="group relative flex flex-col border border-ink/10 overflow-hidden bg-cream hover:border-gold/40 transition-colors duration-300"
+      className="group relative flex flex-col rounded-2xl overflow-hidden bg-cream shadow-[0_2px_16px_rgba(28,25,23,0.07)] hover:shadow-[0_4px_24px_rgba(28,25,23,0.13)] transition-shadow duration-300"
     >
       <div className={`relative bg-dark overflow-hidden ${tall ? 'h-[340px]' : 'h-[140px]'}`}>
         <Image
@@ -133,7 +133,7 @@ export default function Rooms() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="group relative flex flex-col border border-ink/10 overflow-hidden bg-cream hover:border-gold/40 transition-colors duration-300"
+            className="group relative flex flex-col rounded-2xl overflow-hidden bg-cream shadow-[0_2px_16px_rgba(28,25,23,0.07)] hover:shadow-[0_4px_24px_rgba(28,25,23,0.13)] transition-shadow duration-300"
           >
             <div className="relative h-[340px] bg-dark overflow-hidden">
               <Image
