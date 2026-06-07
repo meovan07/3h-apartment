@@ -53,7 +53,7 @@ export default function Pricing() {
                 } ${tier.hot ? 'bg-ink text-cream' : 'bg-cream text-ink'}`}
               >
                 {tier.hot && (
-                  <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gold text-cream text-[9px] font-semibold tracking-wide uppercase px-4 py-1.5 whitespace-nowrap">
+                  <span className="self-start mb-4 bg-gold text-cream text-[9px] font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full whitespace-nowrap">
                     {t('popular')}
                   </span>
                 )}
