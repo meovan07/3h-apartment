@@ -135,10 +135,22 @@ export default function Hero() {
               <em className="italic text-gold">{t('headlineAccent')}</em>
             </motion.h1>
 
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease, delay: 0.18 }}
+              className="flex items-center gap-3"
+            >
+              <span className="w-5 h-px bg-ink/20" />
+              <span className="font-sans text-[10px] tracking-[3.5px] uppercase text-muted font-medium">
+                {t('slogan')}
+              </span>
+            </motion.div>
+
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease, delay: 0.2 }}
+              transition={{ duration: 0.6, ease, delay: 0.25 }}
               className="text-[13px] leading-[1.7] text-muted max-w-[280px]"
             >
               {t('body')}
