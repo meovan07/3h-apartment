@@ -40,6 +40,8 @@ export const amenityIcons = [
   'WashingMachine',
   'Tv',
   'Sun',
+  'PlaneLanding',
+  'PawPrint',
 ]
 
 export interface PricingTier {

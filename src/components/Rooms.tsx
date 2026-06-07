@@ -126,11 +126,7 @@ export default function Rooms() {
           transition={{ duration: 0.65, ease }}
           className="mb-12"
         >
-          <span className="inline-flex items-center gap-2.5 text-[10px] font-semibold uppercase tracking-[2px] text-gold">
-            <span className="inline-block h-px w-5 bg-gold" />
-            {t('eyebrow')}
-          </span>
-          <h2 className="mt-3 font-serif text-[40px] font-normal leading-tight text-ink md:text-[48px]">
+          <h2 className="font-serif text-[40px] font-normal leading-tight text-ink md:text-[48px]">
             {t('title')}{' '}
             <em className="italic text-gold">{t('titleAccent')}</em>
           </h2>
@@ -149,45 +145,6 @@ export default function Rooms() {
           ))}
         </div>
 
-        {/* Rooftop — full-width horizontal card */}
-        <motion.article
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.65, ease, delay: 0.15 }}
-          className="mt-6 flex flex-col md:flex-row bg-ink text-cream shadow-[0_2px_16px_rgba(28,25,23,0.12)] overflow-hidden group"
-        >
-          <div className="relative h-[220px] md:h-auto md:w-[380px] shrink-0 overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?auto=format&fit=crop&w=800&q=80"
-              alt={t('rooftop_name')}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              placeholder="blur"
-              blurDataURL={BLUR_URL}
-            />
-          </div>
-          <div className="flex flex-col justify-center gap-4 p-8 md:p-10">
-            <span className="text-[9px] tracking-[2px] uppercase font-semibold text-gold">
-              {t('eyebrow')}
-            </span>
-            <h3 className="font-serif text-[28px] font-normal text-cream leading-tight">
-              {t('rooftop_name')}
-            </h3>
-            <p className="text-[13px] text-cream/60 leading-relaxed max-w-lg">{t('rooftop_desc')}</p>
-            <div className="flex flex-wrap gap-1.5">
-              {(t.raw('rooftop_tags') as string[]).map((tag) => (
-                <span key={tag} className="text-[9px] tracking-wide uppercase text-cream/50 border border-cream/20 px-2.5 py-1">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <div className="pt-2 border-t border-cream/10">
-              <span className="font-serif text-2xl font-normal text-gold">{t('rooftop_price')}</span>
-              <p className="text-[11px] text-cream/50 mt-0.5">{t('rooftop_subtitle')}</p>
-            </div>
-          </div>
-        </motion.article>
 
       </div>
     </section>

@@ -100,7 +100,12 @@ export default function BookingBar() {
           {/* CTA */}
           <div className="md:pl-8">
             <button
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                window.dispatchEvent(
+                  new CustomEvent('prefill-booking', { detail: { checkin, checkout } })
+                )
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+              }}
               className="w-full bg-gold px-8 py-3.5 text-[11px] font-semibold tracking-wide text-cream transition-colors duration-300 hover:bg-cream hover:text-ink md:w-auto"
             >
               {t('cta')}

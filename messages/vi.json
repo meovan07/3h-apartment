@@ -72,8 +72,8 @@
     "units": "Phòng",
     "room1_name": "Studio tầng trệt",
     "room1_floor": "Tầng 1",
-    "room1_desc": "Tiện lợi với lối vào garage trực tiếp. Lý tưởng cho khách đi xe máy hoặc ô tô.",
-    "room1_tags": ["Phòng tắm riêng", "Bếp mini", "Garage", "Điều hòa & WiFi"],
+    "room1_desc": "Tiện lợi với lối vào garage trực tiếp. Lý tưởng cho khách đi xe máy hoặc xe đạp.",
+    "room1_tags": ["Phòng tắm riêng", "Bếp mini", "Đỗ xe máy", "Điều hòa & WiFi"],
     "room2_name": "Studio tầng giữa",
     "room2_floor": "Tầng 2",
     "room2_desc": "Cân bằng hoàn hảo giữa riêng tư và tiện lợi. Phòng yên tĩnh, xa tiếng ồn, có thang máy.",
@@ -98,11 +98,13 @@
       { "name": "WiFi", "desc": "Cáp quang tốc độ cao trong mỗi phòng" },
       { "name": "Điều hòa", "desc": "Mỗi phòng có điều hòa riêng" },
       { "name": "Thang máy", "desc": "Phục vụ tất cả 4 tầng" },
-      { "name": "Bãi đỗ xe có mái", "desc": "Garage tầng trệt" },
+      { "name": "Đỗ xe máy", "desc": "Garage có mái tầng trệt, chỉ dành cho xe máy & xe đạp" },
       { "name": "Bếp mini", "desc": "Tủ lạnh, ấm đun nước & dụng cụ cơ bản" },
       { "name": "Giặt đồ", "desc": "Máy giặt dùng chung" },
       { "name": "TV thông minh", "desc": "Bao gồm kênh truyền hình cáp" },
-      { "name": "Sân thượng", "desc": "Sân thượng ngoài trời & khu phơi đồ" }
+      { "name": "Sân thượng", "desc": "Sân thượng ngoài trời & khu phơi đồ" },
+      { "name": "Đưa đón sân bay", "desc": "Dịch vụ đưa đón sân bay theo yêu cầu" },
+      { "name": "Thú cưng", "desc": "Chào đón thú cưng nhỏ — vui lòng thông báo trước" }
     ]
   },
   "pricing": {

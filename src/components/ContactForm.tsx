@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useTransition } from 'react'
+import { useState, useTransition, useEffect } from 'react'
 import { Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { submitContactForm } from '@/app/actions/contact'
@@ -19,6 +19,19 @@ export default function ContactForm() {
     floor: '',
     message: '',
   })
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const { checkin, checkout } = (e as CustomEvent<{ checkin: string; checkout: string }>).detail
+      setForm(f => ({
+        ...f,
+        checkIn: checkin || f.checkIn,
+        checkOut: checkout || f.checkOut,
+      }))
+    }
+    window.addEventListener('prefill-booking', handler)
+    return () => window.removeEventListener('prefill-booking', handler)
+  }, [])
 
   const floorOptions = [t('floor_none'), t('floor_1'), t('floor_2'), t('floor_3')]
 
