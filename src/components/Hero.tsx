@@ -10,8 +10,8 @@ const BLUR_URL =
   'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUE/8QAIBAAAgIBBQEBAAAAAAAAAAAAAQIDBAUSITFBUf/EABUBAQEAAAAAAAAAAAAAAAAAAAED/8QAGBEAAgMAAAAAAAAAAAAAAAAAARFBYf/aAAwDAQACEQMRAD8AjVLRWqHtlJpWuvFPxJC7jj1H0JrNiySyREMY0jkdnXpAB5u0TdDfJJJJJP/Z'
 
 const slides = [
-  { src: 'https://images.unsplash.com/photo-1559494007-9f5847c49d94?auto=format&fit=crop&w=1400&q=85', alt: 'Building exterior' },
   { src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=85', alt: 'Studio interior' },
+  { src: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=85', alt: 'Living space' },
   { src: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=85', alt: 'Kitchenette' },
   { src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1400&q=85', alt: 'Bathroom' },
 ]
@@ -138,10 +138,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease, delay: 0.18 }}
-              className="flex items-center gap-3"
+              className="flex items-center gap-2.5"
             >
-              <span className="w-5 h-px bg-ink/20" />
-              <span className="font-sans text-[10px] tracking-[3.5px] uppercase text-muted font-medium">
+              <span className="w-4 h-px bg-ink/15" />
+              <span className="font-sans text-[9px] tracking-[3px] uppercase text-muted/70 font-medium">
                 {t('slogan')}
               </span>
             </motion.div>
@@ -194,10 +194,10 @@ export default function Hero() {
                   key={i}
                   onClick={() => goTo(i)}
                   aria-label={slide.alt}
-                  className={`relative h-[70px] flex-1 overflow-hidden bg-dark transition-all duration-300 ${
+                  className={`relative h-[70px] flex-1 overflow-hidden bg-dark transition-all duration-300 rounded-sm ${
                     i === active
-                      ? 'ring-[1.5px] ring-gold ring-offset-2 ring-offset-cream'
-                      : 'opacity-45 hover:opacity-75'
+                      ? 'ring-2 ring-gold ring-offset-2 ring-offset-cream opacity-100'
+                      : 'opacity-40 hover:opacity-70'
                   }`}
                 >
                   <Image

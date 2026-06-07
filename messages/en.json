@@ -21,14 +21,14 @@
     "beach_label": "Beach"
   },
   "stats": {
-    "units_value": "14",
-    "units_label": "Studio units",
-    "size_value": "27 m²",
-    "size_label": "Each studio",
-    "dist_value": "1 km",
-    "dist_label": "To the beach",
-    "rating_value": "4.9 ★",
-    "rating_label": "Guest rating"
+    "units_value": "4.9 ★",
+    "units_label": "Guest rating",
+    "size_value": "Free",
+    "size_label": "WiFi & utilities",
+    "dist_value": "24/7",
+    "dist_label": "Self check-in",
+    "rating_value": "< 1h",
+    "rating_label": "Host response"
   },
   "booking": {
     "checkin": "Check-in",

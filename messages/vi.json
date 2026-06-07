@@ -21,14 +21,14 @@
     "beach_label": "Biển"
   },
   "stats": {
-    "units_value": "14",
-    "units_label": "Phòng studio",
-    "size_value": "27 m²",
-    "size_label": "Mỗi phòng",
-    "dist_value": "1 km",
-    "dist_label": "Ra biển",
-    "rating_value": "4.9 ★",
-    "rating_label": "Đánh giá khách"
+    "units_value": "4.9 ★",
+    "units_label": "Đánh giá khách",
+    "size_value": "Miễn phí",
+    "size_label": "WiFi & tiện ích",
+    "dist_value": "24/7",
+    "dist_label": "Tự nhận phòng",
+    "rating_value": "< 1h",
+    "rating_label": "Phản hồi của host"
   },
   "booking": {
     "checkin": "Nhận phòng",
