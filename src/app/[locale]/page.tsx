@@ -1,7 +1,6 @@
 import { setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import Hero from '@/components/Hero'
-import BookingBar from '@/components/BookingBar'
 import Stats from '@/components/Stats'
 import Rooms from '@/components/Rooms'
 import Amenities from '@/components/Amenities'
@@ -26,7 +25,6 @@ export default async function Home({
   return (
     <main>
       <Hero />
-      <BookingBar />
       <Stats />
       <Rooms />
       <Amenities />
