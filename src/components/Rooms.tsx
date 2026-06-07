@@ -35,7 +35,7 @@ function RoomCard({
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}
       className="group relative flex flex-col border border-ink/10 overflow-hidden bg-cream hover:border-gold/40 transition-colors duration-300"
     >
-      <div className={`relative bg-dark overflow-hidden ${tall ? 'h-[400px]' : 'h-[160px]'}`}>
+      <div className={`relative bg-dark overflow-hidden ${tall ? 'h-[340px]' : 'h-[140px]'}`}>
         <Image
           src={room.imgSrc}
           alt={name}
@@ -48,8 +48,8 @@ function RoomCard({
           {floor}
         </span>
       </div>
-      <div className={`flex flex-col flex-1 ${tall ? 'p-5' : 'p-4'}`}>
-        <div className={`flex flex-col ${tall ? 'gap-3' : 'gap-2'}`}>
+      <div className={`flex flex-col flex-1 ${tall ? 'p-5' : 'p-3'}`}>
+        <div className={`flex flex-col ${tall ? 'gap-3' : 'gap-1.5'}`}>
           <div>
             <h3 className={`font-serif font-light text-ink ${tall ? 'text-xl' : 'text-[17px]'}`}>{name}</h3>
             <p className="text-[12px] text-muted mt-1 leading-relaxed">{desc}</p>
@@ -70,7 +70,7 @@ function RoomCard({
             ))}
           </div>
         </div>
-        <div className={`flex items-center justify-between border-t border-ink/10 ${tall ? 'pt-3 mt-6' : 'pt-2.5 mt-3'}`}>
+        <div className={`flex items-center justify-between border-t border-ink/10 ${tall ? 'pt-3 mt-4' : 'pt-2 mt-2'}`}>
           <div>
             <span className="font-serif text-2xl font-light text-ink">
               {formatVND(room.priceVND)}
@@ -119,10 +119,10 @@ export default function Rooms() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-3">
           <RoomCard room={ground} tall delay={0} translations={roomTranslations[ground.id]} t={t} />
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             <RoomCard room={mid} delay={0.1} translations={roomTranslations[mid.id]} t={t} />
             <RoomCard room={upper} delay={0.15} translations={roomTranslations[upper.id]} t={t} />
           </div>
@@ -135,7 +135,7 @@ export default function Rooms() {
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             className="group relative flex flex-col border border-ink/10 overflow-hidden bg-cream hover:border-gold/40 transition-colors duration-300"
           >
-            <div className="relative h-[400px] bg-dark overflow-hidden">
+            <div className="relative h-[340px] bg-dark overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?auto=format&fit=crop&w=800&q=80"
                 alt={t('rooftop_name')}
