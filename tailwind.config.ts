@@ -9,17 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink:       '#0c1f35',
-        cream:     '#f5faff',
-        muted:     '#6b8cae',
-        gold:      '#0891b2',
-        'gold-lt': '#bae6fd',
-        surface:   '#f0f9ff',
-        dark:      '#071a2b',
+        // 2026 earth-tone palette — warm, calm, contemporary
+        ink:       '#1C1917',  // stone-900 — warm near-black
+        cream:     '#F9F7F3',  // warm off-white (Cloud Dancer inspired)
+        muted:     '#78716C',  // stone-500 — warm gray
+        gold:      '#C2410C',  // terracotta/clay — trending 2026 accent
+        'gold-lt': '#FFF1EE',  // terracotta tint
+        surface:   '#F2EEE8',  // sandy warm surface
+        dark:      '#100C09',  // deep warm black
       },
       fontFamily: {
-        serif: ['var(--font-cormorant)', 'Georgia', 'serif'],
-        sans:  ['var(--font-jost)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-fraunces)', 'Georgia', 'serif'],
+        sans:  ['var(--font-dm)', 'system-ui', 'sans-serif'],
       },
       gridTemplateColumns: {
         hero: '55% 45%',

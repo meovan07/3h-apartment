@@ -26,36 +26,39 @@ export default function Nav() {
 
   const handleNav = (id: string) => {
     setOpen(false)
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-cream/95 backdrop-blur-sm shadow-sm' : 'bg-cream/80 backdrop-blur-sm'
-      } border-b border-ink/10`}
+        scrolled
+          ? 'bg-cream/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(28,25,23,0.08)]'
+          : 'bg-cream/80 backdrop-blur-sm'
+      }`}
     >
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+
         {/* Logo */}
         <div className="flex flex-col leading-none">
-          <span className="font-serif text-base tracking-widest text-ink font-medium">
+          <span className="font-serif text-[15px] tracking-[3px] text-ink font-medium">
             3H APARTMENT
           </span>
-          <span className="text-[8px] tracking-widest uppercase text-gold mt-0.5">
+          <span className="text-[8px] tracking-[2px] uppercase text-gold mt-0.5 font-sans">
             Đà Nẵng · Vietnam
           </span>
         </div>
 
         {/* Center nav — desktop */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-7">
           {links.map((link) => (
             <button
               key={link.key}
               onClick={() => handleNav(link.key)}
-              className="text-[10px] tracking-[3px] uppercase text-muted hover:text-ink transition-colors duration-200"
+              className="text-[12px] font-medium text-muted hover:text-ink transition-colors duration-200 relative group"
             >
               {link.label}
+              <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
             </button>
           ))}
         </nav>
@@ -65,7 +68,7 @@ export default function Nav() {
           <LanguageSwitcher />
           <button
             onClick={() => handleNav('contact')}
-            className="bg-ink text-cream text-[9px] tracking-[3px] uppercase px-6 py-2.5 hover:bg-gold transition-colors duration-300"
+            className="bg-gold text-cream text-[11px] font-semibold tracking-wide px-5 py-2.5 hover:bg-ink transition-colors duration-300"
           >
             {t('book')}
           </button>
@@ -86,19 +89,19 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-cream border-t border-ink/10 px-6 py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-cream border-t border-ink/10 px-6 py-6 flex flex-col gap-4">
           {links.map((link) => (
             <button
               key={link.key}
               onClick={() => handleNav(link.key)}
-              className="text-[11px] tracking-[3px] uppercase text-muted hover:text-ink text-left transition-colors"
+              className="text-[13px] font-medium text-muted hover:text-ink text-left transition-colors"
             >
               {link.label}
             </button>
           ))}
           <button
             onClick={() => handleNav('contact')}
-            className="bg-ink text-cream text-[9px] tracking-[3px] uppercase px-6 py-3 w-full mt-2"
+            className="bg-gold text-cream text-[11px] font-semibold tracking-wide px-6 py-3.5 w-full mt-2 hover:bg-ink transition-colors duration-300"
           >
             {t('book')}
           </button>

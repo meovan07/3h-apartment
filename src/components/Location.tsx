@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MapPin, Phone, Facebook, Navigation } from 'lucide-react'
+import { MapPin, Phone, ExternalLink, Navigation } from 'lucide-react'
 import { distances } from '@/lib/data'
 import { useTranslations } from 'next-intl'
 import ContactForm from './ContactForm'
@@ -32,16 +32,18 @@ export default function Location() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           className="mb-12"
         >
-          <span className="text-[9px] font-medium uppercase tracking-[3px] text-gold">
+          <span className="inline-flex items-center gap-2.5 text-[10px] tracking-[2px] uppercase text-gold font-semibold">
+            <span className="w-5 h-px bg-gold inline-block" />
             {t('eyebrow')}
           </span>
-          <h2 className="mt-2 font-serif text-[40px] font-light leading-tight text-ink">
-            {t('title')} <em className="not-italic text-gold">{t('titleAccent')}</em>
+          <h2 className="mt-3 font-serif text-[40px] md:text-[48px] font-light leading-tight text-ink">
+            {t('title')} <em className="italic text-gold">{t('titleAccent')}</em>
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          {/* Left */}
+
+          {/* Left — address + distances + map */}
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,12 +53,12 @@ export default function Location() {
           >
             <div className="flex items-start gap-3">
               <MapPin size={14} className="mt-0.5 shrink-0 text-gold" />
-              <p className="whitespace-pre-line text-[12px] leading-relaxed text-muted">
+              <p className="whitespace-pre-line text-[13px] leading-relaxed text-muted">
                 {t('address')}
               </p>
             </div>
 
-            {/* Distance timeline */}
+            {/* Distance list */}
             <div className="flex flex-col">
               {distances.map((d, i) => (
                 <motion.div
@@ -71,11 +73,11 @@ export default function Location() {
                 >
                   <div className="flex items-center gap-3">
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                    <span className="text-[12px] text-ink">
+                    <span className="text-[13px] text-ink">
                       {tDist(distanceTranslationKeys[i])}
                     </span>
                   </div>
-                  <span className="text-[11px] font-medium text-muted">{d.dist}</span>
+                  <span className="text-[12px] font-medium text-muted">{d.dist}</span>
                 </motion.div>
               ))}
             </div>
@@ -96,7 +98,7 @@ export default function Location() {
             </div>
           </motion.div>
 
-          {/* Right */}
+          {/* Right — contact info + form */}
           <motion.div
             id="contact"
             initial={{ opacity: 0, y: 28 }}
@@ -110,31 +112,31 @@ export default function Location() {
               <div className="flex flex-col gap-3.5">
                 <a
                   href={`tel:${t('phone').replace(/\s/g, '')}`}
-                  className="flex items-center gap-3 text-[12px] text-muted transition-colors hover:text-gold"
+                  className="flex items-center gap-3 text-[13px] text-muted transition-colors hover:text-gold"
                 >
-                  <Phone size={13} className="shrink-0 text-gold" />
+                  <Phone size={14} className="shrink-0 text-gold" />
                   <span>{t('phone')}</span>
                 </a>
                 <a
                   href="https://fb.com/3Hapartment"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[12px] text-muted transition-colors hover:text-gold"
+                  className="flex items-center gap-3 text-[13px] text-muted transition-colors hover:text-gold"
                 >
-                  <Facebook size={13} className="shrink-0 text-gold" />
+                  <ExternalLink size={14} className="shrink-0 text-gold" />
                   <span>{t('facebook')}</span>
                 </a>
-                <div className="flex items-start gap-3 text-[12px] text-muted">
-                  <Navigation size={13} className="mt-0.5 shrink-0 text-gold" />
+                <div className="flex items-start gap-3 text-[13px] text-muted">
+                  <Navigation size={14} className="mt-0.5 shrink-0 text-gold" />
                   <span>{t('address_short')}</span>
                 </div>
               </div>
             </div>
 
             <div>
-              <h4 className="mb-6 text-[9px] uppercase tracking-[3px] text-gold">
+              <span className="flex items-center gap-2.5 text-[10px] tracking-[2px] uppercase text-gold font-semibold mb-6">
                 {t('form_eyebrow')}
-              </h4>
+              </span>
               <ContactForm />
             </div>
           </motion.div>

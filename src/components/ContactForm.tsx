@@ -42,8 +42,8 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    'w-full bg-transparent border-b border-ink/20 py-2.5 text-[12px] text-ink placeholder:text-muted/50 outline-none focus:border-gold transition-colors duration-200'
-  const labelClass = 'block text-[8px] tracking-[3px] uppercase text-gold mb-1.5'
+    'w-full bg-transparent border-b border-ink/15 py-2.5 text-[13px] text-ink placeholder:text-muted/45 outline-none focus:border-gold transition-colors duration-200'
+  const labelClass = 'block text-[9px] tracking-[2px] uppercase text-gold font-semibold mb-1.5'
   const isLoading = status === 'loading' || isPending
 
   return (
@@ -120,7 +120,7 @@ export default function ContactForm() {
           onChange={set('message')}
           placeholder={t('message_placeholder')}
           rows={4}
-          className="w-full bg-transparent border-b border-ink/20 py-2.5 text-[12px] text-ink placeholder:text-muted/50 outline-none focus:border-gold transition-colors duration-200 resize-none"
+          className="w-full bg-transparent border-b border-ink/15 py-2.5 text-[13px] text-ink placeholder:text-muted/45 outline-none focus:border-gold transition-colors duration-200 resize-none"
         />
       </div>
 
@@ -140,7 +140,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isLoading}
-        className="flex items-center justify-center gap-2 bg-ink text-cream text-[9px] tracking-[3px] uppercase px-6 py-4 hover:bg-gold transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="flex items-center justify-center gap-2 bg-gold text-cream text-[11px] font-semibold tracking-wide px-6 py-4 hover:bg-ink transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isLoading ? (
           t('submitting')

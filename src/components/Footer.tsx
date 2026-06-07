@@ -11,23 +11,23 @@ export default function Footer() {
   }
 
   return (
-    <footer className="border-t border-ink/10">
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-        <span className="font-serif text-base tracking-widest text-ink">3H APARTMENT</span>
+    <footer className="border-t border-ink/10 bg-surface">
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+        <span className="font-serif text-[15px] tracking-[3px] text-ink">3H APARTMENT</span>
 
         <nav className="flex items-center gap-6">
-          {['rooms', 'amenities', 'pricing', 'location'].map((id) => (
+          {(['rooms', 'amenities', 'pricing', 'location'] as const).map((id) => (
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className="text-[9px] tracking-widest uppercase text-muted hover:text-ink transition-colors duration-200"
+              className="text-[11px] font-medium text-muted hover:text-ink transition-colors duration-200"
             >
-              {t(id as 'rooms' | 'amenities' | 'pricing' | 'location')}
+              {t(id)}
             </button>
           ))}
         </nav>
 
-        <p className="text-[9px] text-muted text-center md:text-right">
+        <p className="text-[11px] text-muted text-center md:text-right">
           {tFooter('copyright')}
         </p>
       </div>

@@ -23,13 +23,13 @@ export default function SearchBar() {
 
   return (
     <section className="bg-surface border-b border-ink/10">
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6">
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-5">
         <div className="border border-ink/10 flex flex-col md:flex-row items-stretch divide-y md:divide-y-0 md:divide-x divide-ink/10">
           {fields.map((f) => (
             <div key={f.id} className="flex-1 px-5 py-4">
               <label
                 htmlFor={f.id}
-                className="block text-[8px] tracking-[3px] uppercase text-gold mb-1 font-medium"
+                className="block text-[10px] tracking-[2px] uppercase text-gold font-semibold mb-1.5"
               >
                 {f.label}
               </label>
@@ -39,19 +39,19 @@ export default function SearchBar() {
                 placeholder={f.placeholder}
                 min={f.id === 'guests' ? 1 : undefined}
                 max={f.id === 'guests' ? 4 : undefined}
-                className="w-full text-[12px] font-light text-ink bg-transparent outline-none placeholder:text-muted/60"
+                className="w-full text-[13px] text-ink bg-transparent outline-none placeholder:text-muted/60"
               />
             </div>
           ))}
 
           <div className="flex-1 px-5 py-4">
-            <label className="block text-[8px] tracking-[3px] uppercase text-gold mb-1 font-medium">
+            <label className="block text-[10px] tracking-[2px] uppercase text-gold font-semibold mb-1.5">
               {t('floor')}
             </label>
             <select
               value={floor}
               onChange={(e) => setFloor(e.target.value)}
-              className="w-full text-[12px] font-light text-ink bg-transparent outline-none cursor-pointer"
+              className="w-full text-[13px] text-ink bg-transparent outline-none cursor-pointer"
             >
               {floorOptions.map((o) => (
                 <option key={o} value={o}>
@@ -64,9 +64,9 @@ export default function SearchBar() {
           <div className="flex items-center px-3 py-3">
             <button
               onClick={() => document.getElementById('rooms')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex items-center gap-2 bg-ink text-cream text-[9px] tracking-[3px] uppercase px-9 py-4 hover:bg-gold transition-colors duration-300 whitespace-nowrap w-full md:w-auto justify-center"
+              className="flex items-center gap-2 bg-gold text-cream text-[11px] font-semibold tracking-wide px-9 py-4 hover:bg-ink transition-colors duration-300 whitespace-nowrap w-full md:w-auto justify-center"
             >
-              <Search size={12} />
+              <Search size={13} />
               {t('button')}
             </button>
           </div>

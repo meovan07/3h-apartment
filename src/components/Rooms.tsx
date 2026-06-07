@@ -14,13 +14,19 @@ function RoomCard({
   room,
   tall,
   delay,
-  tRooms,
+  t,
 }: {
   room: (typeof rooms)[0]
   tall?: boolean
   delay: number
-  tRooms: ReturnType<typeof useTranslations>
+  t: ReturnType<typeof useTranslations>
 }) {
+  const key = `room${room.id}` as const
+  const name  = t(`${key}_name` as any)
+  const floor = t(`${key}_floor` as any)
+  const desc  = t(`${key}_desc` as any)
+  const tags  = t.raw(`${key}_tags` as any) as string[]
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 32 }}
@@ -29,34 +35,34 @@ function RoomCard({
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}
       className="group relative flex flex-col border border-ink/10 overflow-hidden bg-cream hover:border-gold/40 transition-colors duration-300"
     >
-      <div className={`relative bg-[#071a2b] overflow-hidden ${tall ? 'h-[400px]' : 'h-[192px]'}`}>
+      <div className={`relative bg-dark overflow-hidden ${tall ? 'h-[400px]' : 'h-[200px]'}`}>
         <Image
           src={room.imgSrc}
-          alt={room.name}
+          alt={name}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           placeholder="blur"
           blurDataURL={BLUR_URL}
         />
-        <span className="absolute top-3 left-3 bg-cream/90 text-ink text-[8px] tracking-[2px] uppercase px-2.5 py-1">
-          {room.floor}
+        <span className="absolute top-3 left-3 bg-cream/90 text-ink text-[9px] tracking-[1.5px] uppercase font-medium px-2.5 py-1">
+          {floor}
         </span>
       </div>
       <div className="p-5 flex flex-col gap-3 flex-1">
         <div>
-          <h3 className="font-serif text-xl font-light text-ink">{room.name}</h3>
-          <p className="text-[11px] text-muted mt-1 leading-relaxed">{room.description}</p>
+          <h3 className="font-serif text-xl font-light text-ink">{name}</h3>
+          <p className="text-[12px] text-muted mt-1 leading-relaxed">{desc}</p>
         </div>
-        <div className="flex gap-3 text-[10px] text-muted">
+        <div className="flex gap-3 text-[11px] text-muted">
           <span>{room.size} m²</span>
           <span className="text-ink/20">·</span>
-          <span>{tRooms('units')} {room.units}</span>
+          <span>{t('units')} {room.maxGuests}</span>
         </div>
         <div className="flex flex-wrap gap-1.5">
-          {room.tags.map((tag) => (
+          {tags.map((tag) => (
             <span
               key={tag}
-              className="text-[8px] tracking-widest uppercase text-muted border border-ink/10 px-2 py-1"
+              className="text-[9px] tracking-wide uppercase text-muted border border-ink/10 px-2.5 py-1"
             >
               {tag}
             </span>
@@ -67,13 +73,13 @@ function RoomCard({
             <span className="font-serif text-2xl font-light text-ink">
               {formatVND(room.priceVND)}
             </span>
-            <span className="text-[10px] text-muted ml-1">{tRooms('per_night')}</span>
+            <span className="text-[11px] text-muted ml-1">{t('per_night')}</span>
           </div>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="flex items-center gap-1.5 text-[9px] tracking-[2px] uppercase text-gold hover:text-ink transition-colors duration-200"
+            className="flex items-center gap-1.5 text-[11px] font-medium text-gold hover:text-ink transition-colors duration-200"
           >
-            {tRooms('book_now')} <ArrowRight size={11} />
+            {t('book_now')} <ArrowRight size={12} />
           </button>
         </div>
       </div>
@@ -95,21 +101,22 @@ export default function Rooms() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           className="mb-12"
         >
-          <span className="text-[9px] tracking-[3px] uppercase text-gold font-medium">
+          <span className="inline-flex items-center gap-2.5 text-[10px] tracking-[2px] uppercase text-gold font-semibold">
+            <span className="w-5 h-px bg-gold inline-block" />
             {t('eyebrow')}
           </span>
-          <h2 className="font-serif text-[40px] font-light text-ink mt-2 leading-tight">
+          <h2 className="font-serif text-[40px] md:text-[48px] font-light text-ink mt-3 leading-tight">
             {t('title')}{' '}
             <em className="italic text-gold">{t('titleAccent')}</em>
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-4">
-          <RoomCard room={ground} tall delay={0} tRooms={t} />
+          <RoomCard room={ground} tall delay={0} t={t} />
 
           <div className="flex flex-col gap-4">
-            <RoomCard room={mid} delay={0.1} tRooms={t} />
-            <RoomCard room={upper} delay={0.15} tRooms={t} />
+            <RoomCard room={mid} delay={0.1} t={t} />
+            <RoomCard room={upper} delay={0.15} t={t} />
           </div>
 
           {/* Rooftop card */}
@@ -120,29 +127,29 @@ export default function Rooms() {
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             className="group relative flex flex-col border border-ink/10 overflow-hidden bg-cream hover:border-gold/40 transition-colors duration-300"
           >
-            <div className="relative h-[400px] bg-[#071a2b] overflow-hidden">
+            <div className="relative h-[400px] bg-dark overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?auto=format&fit=crop&w=800&q=80"
-                alt="Rooftop terrace"
+                alt={t('rooftop_name')}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 placeholder="blur"
                 blurDataURL={BLUR_URL}
               />
-              <span className="absolute top-3 left-3 bg-cream/90 text-ink text-[8px] tracking-[2px] uppercase px-2.5 py-1">
-                Rooftop
+              <span className="absolute top-3 left-3 bg-cream/90 text-ink text-[9px] tracking-[1.5px] uppercase font-medium px-2.5 py-1">
+                {t('rooftop_name')}
               </span>
             </div>
             <div className="p-5 flex flex-col gap-3">
               <div>
                 <h3 className="font-serif text-xl font-light text-ink">{t('rooftop_name')}</h3>
-                <p className="text-[11px] text-muted mt-1 leading-relaxed">{t('rooftop_desc')}</p>
+                <p className="text-[12px] text-muted mt-1 leading-relaxed">{t('rooftop_desc')}</p>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {(t.raw('rooftop_tags') as string[]).map((tag) => (
                   <span
                     key={tag}
-                    className="text-[8px] tracking-widest uppercase text-muted border border-ink/10 px-2 py-1"
+                    className="text-[9px] tracking-wide uppercase text-muted border border-ink/10 px-2.5 py-1"
                   >
                     {tag}
                   </span>
@@ -150,7 +157,7 @@ export default function Rooms() {
               </div>
               <div className="pt-3 border-t border-ink/10">
                 <span className="font-serif text-xl font-light text-gold">{t('rooftop_price')}</span>
-                <p className="text-[10px] text-muted mt-0.5">{t('rooftop_subtitle')}</p>
+                <p className="text-[11px] text-muted mt-0.5">{t('rooftop_subtitle')}</p>
               </div>
             </div>
           </motion.article>

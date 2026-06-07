@@ -13,7 +13,11 @@
     "headlineAccent": "ocean.",
     "body": "14 private studios, each 27 m², in the heart of Mỹ An ward, Ngũ Hành Sơn district. Family-run with every detail considered.",
     "cta_rooms": "View all rooms",
-    "cta_contact": "Contact us"
+    "cta_contact": "Contact us",
+    "from_label": "From",
+    "per_night_short": "/night",
+    "studios_label": "Studios",
+    "beach_label": "Beach"
   },
   "stats": {
     "units_value": "14",
@@ -25,17 +29,6 @@
     "rating_value": "4.9 ★",
     "rating_label": "Guest rating"
   },
-  "search": {
-    "checkin": "Check-in",
-    "checkout": "Check-out",
-    "guests": "Guests",
-    "floor": "Floor preference",
-    "button": "Search rooms",
-    "floor_none": "No preference",
-    "floor_1": "Floor 1 (Ground)",
-    "floor_2": "Floor 2 (Mid)",
-    "floor_3": "Floors 3–4 (Upper)"
-  },
   "rooms": {
     "eyebrow": "Our spaces",
     "title": "Studios &",
@@ -44,8 +37,20 @@
     "per_night": "/ night",
     "guests": "guests",
     "units": "Units",
+    "room1_name": "Ground floor studio",
+    "room1_floor": "Floor 1",
+    "room1_desc": "Street-level convenience with direct garage access. Ideal for guests travelling by motorbike or car.",
+    "room1_tags": ["Private bathroom", "Kitchenette", "Garage access", "AC & WiFi"],
+    "room2_name": "Mid-floor studio",
+    "room2_floor": "Floor 2",
+    "room2_desc": "The perfect balance of privacy and access. Quiet rooms away from street noise, served by elevator.",
+    "room2_tags": ["Private bathroom", "Kitchenette", "Elevator", "AC & WiFi"],
+    "room3_name": "Upper floor studio",
+    "room3_floor": "Floors 3–4",
+    "room3_desc": "Elevated perspectives over the Mỹ An neighbourhood with partial views toward the sea on clear days.",
+    "room3_tags": ["Private bathroom", "Kitchenette", "Best city views", "AC & WiFi"],
     "rooftop_name": "Rooftop terrace",
-    "rooftop_desc": "Open-air sân thượng shared by all guests. City views, drying area, and a perfect spot for sunrise coffee.",
+    "rooftop_desc": "Open-air terrace shared by all guests. City views, drying area, and a perfect spot for sunrise coffee.",
     "rooftop_tags": ["Open-air", "City views", "Shared space", "Free access"],
     "rooftop_price": "Complimentary",
     "rooftop_subtitle": "Available to all guests"
@@ -55,7 +60,17 @@
     "title": "Everything you",
     "titleAccent": "need.",
     "body": "Each studio at 3H Apartment comes fully equipped so you can settle in immediately. From high-speed WiFi to a private kitchenette, we've thought through the details so you don't have to.",
-    "cta": "Enquire now"
+    "cta": "Enquire now",
+    "items": [
+      { "name": "WiFi", "desc": "High-speed fibre in every room" },
+      { "name": "Air conditioning", "desc": "Individual unit per room" },
+      { "name": "Elevator", "desc": "Serving all 4 floors" },
+      { "name": "Covered parking", "desc": "Ground floor garage" },
+      { "name": "Kitchenette", "desc": "Fridge, kettle & cooking basics" },
+      { "name": "Laundry", "desc": "Shared washer available" },
+      { "name": "Smart TV", "desc": "Cable channels included" },
+      { "name": "Rooftop terrace", "desc": "Open-air terrace & drying area" }
+    ]
   },
   "pricing": {
     "eyebrow": "Rates",
@@ -64,7 +79,19 @@
     "popular": "Most popular",
     "per_night": "/ night",
     "cta": "Book this room",
-    "note": "Prices are per room per night · Includes all facilities · Contact us for monthly rates"
+    "note": "Prices are per room per night · Includes all facilities · Contact us for monthly rates",
+    "tier1_label": "Ground floor",
+    "tier1_floor": "Floor 1",
+    "tier1_units": "Units 1–2",
+    "tier1_features": ["27 m² private studio", "Private bathroom", "Kitchenette", "Garage access"],
+    "tier2_label": "Mid-floor",
+    "tier2_floor": "Floor 2",
+    "tier2_units": "Units 3–6",
+    "tier2_features": ["27 m² private studio", "Private bathroom", "Kitchenette", "Elevator access"],
+    "tier3_label": "Upper floor",
+    "tier3_floor": "Floors 3–4",
+    "tier3_units": "Units 7–14",
+    "tier3_features": ["27 m² private studio", "Private bathroom", "Kitchenette", "Best city views"]
   },
   "location": {
     "eyebrow": "Find us",

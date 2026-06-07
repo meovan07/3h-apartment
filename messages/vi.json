@@ -13,7 +13,11 @@
     "headlineAccent": "biển cả.",
     "body": "14 phòng studio riêng tư, mỗi phòng 27 m², tại phường Mỹ An, quận Ngũ Hành Sơn. Căn hộ gia đình, tỉ mỉ từng chi tiết.",
     "cta_rooms": "Xem tất cả phòng",
-    "cta_contact": "Liên hệ"
+    "cta_contact": "Liên hệ",
+    "from_label": "Từ",
+    "per_night_short": "/đêm",
+    "studios_label": "Phòng",
+    "beach_label": "Biển"
   },
   "stats": {
     "units_value": "14",
@@ -25,17 +29,6 @@
     "rating_value": "4.9 ★",
     "rating_label": "Đánh giá khách"
   },
-  "search": {
-    "checkin": "Nhận phòng",
-    "checkout": "Trả phòng",
-    "guests": "Số khách",
-    "floor": "Tầng mong muốn",
-    "button": "Tìm phòng",
-    "floor_none": "Không ưu tiên",
-    "floor_1": "Tầng 1 (Trệt)",
-    "floor_2": "Tầng 2 (Giữa)",
-    "floor_3": "Tầng 3–4 (Cao)"
-  },
   "rooms": {
     "eyebrow": "Không gian của chúng tôi",
     "title": "Studio &",
@@ -44,8 +37,20 @@
     "per_night": "/ đêm",
     "guests": "khách",
     "units": "Phòng",
+    "room1_name": "Studio tầng trệt",
+    "room1_floor": "Tầng 1",
+    "room1_desc": "Tiện lợi với lối vào garage trực tiếp. Lý tưởng cho khách đi xe máy hoặc ô tô.",
+    "room1_tags": ["Phòng tắm riêng", "Bếp mini", "Garage", "Điều hòa & WiFi"],
+    "room2_name": "Studio tầng giữa",
+    "room2_floor": "Tầng 2",
+    "room2_desc": "Cân bằng hoàn hảo giữa riêng tư và tiện lợi. Phòng yên tĩnh, xa tiếng ồn, có thang máy.",
+    "room2_tags": ["Phòng tắm riêng", "Bếp mini", "Thang máy", "Điều hòa & WiFi"],
+    "room3_name": "Studio tầng cao",
+    "room3_floor": "Tầng 3–4",
+    "room3_desc": "Nhìn ra khu Mỹ An, một số phòng có tầm nhìn ra biển vào những ngày trời quang.",
+    "room3_tags": ["Phòng tắm riêng", "Bếp mini", "View đẹp nhất", "Điều hòa & WiFi"],
     "rooftop_name": "Sân thượng",
-    "rooftop_desc": "Không gian mở dùng chung cho tất cả khách. View thành phố, khu phơi đồ, lý tưởng để thưởng thức cà phê buổi sáng.",
+    "rooftop_desc": "Sân thượng mở dùng chung cho tất cả khách. View thành phố, khu phơi đồ, lý tưởng để thưởng thức cà phê buổi sáng.",
     "rooftop_tags": ["Ngoài trời", "View thành phố", "Dùng chung", "Miễn phí"],
     "rooftop_price": "Miễn phí",
     "rooftop_subtitle": "Dành cho tất cả khách lưu trú"
@@ -55,7 +60,17 @@
     "title": "Mọi thứ bạn",
     "titleAccent": "cần.",
     "body": "Mỗi phòng studio tại 3H Apartment đều được trang bị đầy đủ để bạn có thể vào ở ngay. Từ WiFi tốc độ cao đến bếp mini riêng — chúng tôi đã chuẩn bị chu đáo.",
-    "cta": "Liên hệ ngay"
+    "cta": "Liên hệ ngay",
+    "items": [
+      { "name": "WiFi", "desc": "Cáp quang tốc độ cao trong mỗi phòng" },
+      { "name": "Điều hòa", "desc": "Mỗi phòng có điều hòa riêng" },
+      { "name": "Thang máy", "desc": "Phục vụ tất cả 4 tầng" },
+      { "name": "Bãi đỗ xe có mái", "desc": "Garage tầng trệt" },
+      { "name": "Bếp mini", "desc": "Tủ lạnh, ấm đun nước & dụng cụ cơ bản" },
+      { "name": "Giặt đồ", "desc": "Máy giặt dùng chung" },
+      { "name": "TV thông minh", "desc": "Bao gồm kênh truyền hình cáp" },
+      { "name": "Sân thượng", "desc": "Sân thượng ngoài trời & khu phơi đồ" }
+    ]
   },
   "pricing": {
     "eyebrow": "Bảng giá",
@@ -64,7 +79,19 @@
     "popular": "Phổ biến nhất",
     "per_night": "/ đêm",
     "cta": "Đặt phòng này",
-    "note": "Giá mỗi phòng mỗi đêm · Bao gồm tất cả tiện nghi · Liên hệ để biết giá thuê theo tháng"
+    "note": "Giá mỗi phòng mỗi đêm · Bao gồm tất cả tiện nghi · Liên hệ để biết giá thuê theo tháng",
+    "tier1_label": "Tầng trệt",
+    "tier1_floor": "Tầng 1",
+    "tier1_units": "Phòng 1–2",
+    "tier1_features": ["Studio riêng 27 m²", "Phòng tắm riêng", "Bếp mini", "Garage"],
+    "tier2_label": "Tầng giữa",
+    "tier2_floor": "Tầng 2",
+    "tier2_units": "Phòng 3–6",
+    "tier2_features": ["Studio riêng 27 m²", "Phòng tắm riêng", "Bếp mini", "Thang máy"],
+    "tier3_label": "Tầng cao",
+    "tier3_floor": "Tầng 3–4",
+    "tier3_units": "Phòng 7–14",
+    "tier3_features": ["Studio riêng 27 m²", "Phòng tắm riêng", "Bếp mini", "View đẹp nhất"]
   },
   "location": {
     "eyebrow": "Tìm chúng tôi",
