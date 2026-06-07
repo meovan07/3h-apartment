@@ -109,9 +109,9 @@ export default function Hero() {
         </div>
 
         {/* Right — editorial content */}
-        <div className="flex flex-col bg-cream px-8 md:px-12 py-12 md:py-16">
+        <div className="flex flex-col justify-between bg-cream px-8 md:px-12 py-10 md:py-14">
 
-          <div className="flex flex-col gap-5 flex-1">
+          <div className="flex flex-col gap-4">
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -128,7 +128,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease, delay: 0.1 }}
-              className="font-serif font-light text-[54px] md:text-[66px] lg:text-[76px] leading-[0.92] tracking-tight text-ink"
+              className="font-serif font-normal text-[52px] md:text-[62px] lg:text-[72px] leading-[0.95] tracking-tight text-ink"
             >
               {t('headline')}
               <br />
@@ -164,25 +164,25 @@ export default function Hero() {
             >
               <div>
                 <p className="text-[9px] tracking-[2px] uppercase text-muted mb-1">{t('from_label')}</p>
-                <p className="font-serif text-xl font-light text-ink leading-none">
+                <p className="font-serif text-xl font-normal text-ink leading-none">
                   ₫500k<span className="text-muted text-[11px] font-sans ml-0.5">{t('per_night_short')}</span>
                 </p>
               </div>
               <span className="w-px h-8 bg-ink/10" />
               <div>
                 <p className="text-[9px] tracking-[2px] uppercase text-muted mb-1">{t('studios_label')}</p>
-                <p className="font-serif text-xl font-light text-ink leading-none">14</p>
+                <p className="font-serif text-xl font-normal text-ink leading-none">14</p>
               </div>
               <span className="w-px h-8 bg-ink/10" />
               <div>
                 <p className="text-[9px] tracking-[2px] uppercase text-muted mb-1">{t('beach_label')}</p>
-                <p className="font-serif text-xl font-light text-ink leading-none">1 km</p>
+                <p className="font-serif text-xl font-normal text-ink leading-none">1 km</p>
               </div>
             </motion.div>
           </div>
 
           {/* Bottom: thumbnail strip + CTAs */}
-          <div className="flex flex-col gap-4 mt-8">
+          <div className="flex flex-col gap-4 mt-6">
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
