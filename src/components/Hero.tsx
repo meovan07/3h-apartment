@@ -130,8 +130,7 @@ export default function Hero() {
               transition={{ duration: 0.7, ease, delay: 0.1 }}
               className="font-serif font-normal text-[52px] md:text-[62px] lg:text-[72px] leading-[0.95] tracking-tight text-ink"
             >
-              {t('headline')}
-              <br />
+              {t('headline')}{' '}
               <em className="italic text-gold">{t('headlineAccent')}</em>
             </motion.h1>
 
@@ -151,7 +150,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease, delay: 0.25 }}
-              className="text-[13px] leading-[1.7] text-muted max-w-[280px]"
+              className="text-[13px] leading-[1.7] text-muted"
             >
               {t('body')}
             </motion.p>
