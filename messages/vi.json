@@ -30,6 +30,37 @@
     "rating_value": "4.9 ★",
     "rating_label": "Đánh giá khách"
   },
+  "booking": {
+    "checkin": "Nhận phòng",
+    "checkout": "Trả phòng",
+    "guests": "Khách",
+    "cta": "Kiểm tra phòng trống"
+  },
+  "testimonials": {
+    "eyebrow": "Đánh giá khách",
+    "title": "Khách hàng",
+    "titleAccent": "nói gì.",
+    "reviews": [
+      {
+        "quote": "Vị trí cực kỳ thuận tiện — đi bộ 5 phút ra biển Mỹ Khê. Phòng sạch sẽ, yên tĩnh và đầy đủ tiện nghi cho cả tuần.",
+        "author": "Sarah T.",
+        "country": "Úc",
+        "date": "Tháng 3, 2025"
+      },
+      {
+        "quote": "Giá rất hợp lý, chủ nhà phản hồi siêu nhanh. Phòng hiện đại, WiFi ổn định, sân thượng là điểm cộng tuyệt vời.",
+        "author": "Marc D.",
+        "country": "Pháp",
+        "date": "Tháng 2, 2025"
+      },
+      {
+        "quote": "Lưu trú cả tháng để làm việc từ xa. Kết nối internet ổn định, bếp tiện dụng, khu phố yên bình và an toàn.",
+        "author": "James K.",
+        "country": "Anh",
+        "date": "Tháng 1, 2025"
+      }
+    ]
+  },
   "rooms": {
     "eyebrow": "Không gian của chúng tôi",
     "title": "Studio &",
@@ -37,6 +68,7 @@
     "book_now": "Đặt ngay",
     "per_night": "/ đêm",
     "guests": "khách",
+    "guests_count": "{count} khách",
     "units": "Phòng",
     "room1_name": "Studio tầng trệt",
     "room1_floor": "Tầng 1",

@@ -30,6 +30,37 @@
     "rating_value": "4.9 ★",
     "rating_label": "Guest rating"
   },
+  "booking": {
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "guests": "Guests",
+    "cta": "Check Availability"
+  },
+  "testimonials": {
+    "eyebrow": "Guest Reviews",
+    "title": "What our",
+    "titleAccent": "guests say.",
+    "reviews": [
+      {
+        "quote": "Perfect location — just 5 minutes on foot to Mỹ Khê beach. The studio was spotless, quiet, and had everything we needed for the full week.",
+        "author": "Sarah T.",
+        "country": "Australia",
+        "date": "March 2025"
+      },
+      {
+        "quote": "Great value and an incredibly responsive host. Modern room, rock-solid WiFi, and the rooftop terrace is a lovely bonus at the end of the day.",
+        "author": "Marc D.",
+        "country": "France",
+        "date": "February 2025"
+      },
+      {
+        "quote": "Stayed a full month working remotely. Reliable internet, a practical kitchenette, and the neighbourhood feels safe and local.",
+        "author": "James K.",
+        "country": "United Kingdom",
+        "date": "January 2025"
+      }
+    ]
+  },
   "rooms": {
     "eyebrow": "Our spaces",
     "title": "Studios &",
@@ -37,6 +68,7 @@
     "book_now": "Book now",
     "per_night": "/ night",
     "guests": "guests",
+    "guests_count": "{count} guests",
     "units": "Units",
     "room1_name": "Ground floor studio",
     "room1_floor": "Floor 1",
