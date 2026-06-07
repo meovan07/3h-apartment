@@ -110,7 +110,7 @@ export default function ContactForm() {
               <option key={o} value={o}>{o}</option>
             ))}
           </select>
-          <ChevronDown size={13} strokeWidth={1.75} className="absolute right-1 top-1/2 -translate-y-1/2 text-muted pointer-events-none" />
+          <ChevronDown size={13} strokeWidth={1.25} className="absolute right-1 top-1/2 -translate-y-1/2 text-muted pointer-events-none" />
         </div>
       </div>
 
