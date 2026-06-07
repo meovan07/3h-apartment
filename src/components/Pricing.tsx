@@ -9,6 +9,12 @@ import { useTranslations } from 'next-intl'
 export default function Pricing() {
   const t = useTranslations('pricing')
 
+  const tierTranslations = {
+    1: { label: t('tier1_label'), floor: t('tier1_floor'), units: t('tier1_units'), features: t.raw('tier1_features') as string[] },
+    2: { label: t('tier2_label'), floor: t('tier2_floor'), units: t('tier2_units'), features: t.raw('tier2_features') as string[] },
+    3: { label: t('tier3_label'), floor: t('tier3_floor'), units: t('tier3_units'), features: t.raw('tier3_features') as string[] },
+  }
+
   return (
     <section id="pricing" className="py-20">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
@@ -31,10 +37,7 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 border border-ink/10">
           {pricingTiers.map((tier, i) => {
-            const label    = t(`tier${tier.id}_label` as any)
-            const floor    = t(`tier${tier.id}_floor` as any)
-            const units    = t(`tier${tier.id}_units` as any)
-            const features = t.raw(`tier${tier.id}_features` as any) as string[]
+            const { label, floor, units, features } = tierTranslations[tier.id as 1 | 2 | 3]
 
             return (
               <motion.div
@@ -78,7 +81,7 @@ export default function Pricing() {
                 </div>
 
                 <ul className="flex flex-col gap-3 mb-8 flex-1">
-                  {features.map((f) => (
+                  {features.map((f: string) => (
                     <li key={f} className="flex items-start gap-2.5">
                       <Check size={13} className="text-gold mt-0.5 shrink-0" strokeWidth={2.5} />
                       <span

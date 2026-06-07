@@ -10,22 +10,22 @@ import { useTranslations } from 'next-intl'
 const BLUR_URL =
   'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUE/8QAIBAAAgIBBQEBAAAAAAAAAAAAAQIDBAUSITFBUf/EABUBAQEAAAAAAAAAAAAAAAAAAAED/8QAGBEAAgMAAAAAAAAAAAAAAAAAARFBYf/aAAwDAQACEQMRAD8AjVLRWqHtlJpWuvFPxJC7jj1H0JrNiySyREMY0jkdnXpAB5u0TdDfJJJJJP/Z'
 
+type RoomTranslations = { name: string; floor: string; desc: string; tags: string[] }
+
 function RoomCard({
   room,
   tall,
   delay,
+  translations,
   t,
 }: {
   room: (typeof rooms)[0]
   tall?: boolean
   delay: number
+  translations: RoomTranslations
   t: ReturnType<typeof useTranslations>
 }) {
-  const key = `room${room.id}` as const
-  const name  = t(`${key}_name` as any)
-  const floor = t(`${key}_floor` as any)
-  const desc  = t(`${key}_desc` as any)
-  const tags  = t.raw(`${key}_tags` as any) as string[]
+  const { name, floor, desc, tags } = translations
 
   return (
     <motion.article
@@ -91,6 +91,12 @@ export default function Rooms() {
   const t = useTranslations('rooms')
   const [ground, mid, upper] = rooms
 
+  const roomTranslations: Record<number, RoomTranslations> = {
+    1: { name: t('room1_name'), floor: t('room1_floor'), desc: t('room1_desc'), tags: t.raw('room1_tags') as string[] },
+    2: { name: t('room2_name'), floor: t('room2_floor'), desc: t('room2_desc'), tags: t.raw('room2_tags') as string[] },
+    3: { name: t('room3_name'), floor: t('room3_floor'), desc: t('room3_desc'), tags: t.raw('room3_tags') as string[] },
+  }
+
   return (
     <section id="rooms" className="py-20">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
@@ -112,11 +118,11 @@ export default function Rooms() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-4">
-          <RoomCard room={ground} tall delay={0} t={t} />
+          <RoomCard room={ground} tall delay={0} translations={roomTranslations[ground.id]} t={t} />
 
           <div className="flex flex-col gap-4">
-            <RoomCard room={mid} delay={0.1} t={t} />
-            <RoomCard room={upper} delay={0.15} t={t} />
+            <RoomCard room={mid} delay={0.1} translations={roomTranslations[mid.id]} t={t} />
+            <RoomCard room={upper} delay={0.15} translations={roomTranslations[upper.id]} t={t} />
           </div>
 
           {/* Rooftop card */}
