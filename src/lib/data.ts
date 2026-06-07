@@ -33,7 +33,6 @@ export const rooms: Room[] = [
 // icon keys only — names/descs live in translations
 export const amenityIcons = [
   'Wifi',
-  'Wind',
   'ArrowUpDown',
   'Car',
   'UtensilsCrossed',

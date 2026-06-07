@@ -96,7 +96,6 @@
     "cta": "Liên hệ ngay",
     "items": [
       { "name": "WiFi", "desc": "Cáp quang tốc độ cao trong mỗi phòng" },
-      { "name": "Điều hòa", "desc": "Điều hòa inverter, điều khiển từ xa" },
       { "name": "Thang máy", "desc": "Phục vụ tất cả 4 tầng" },
       { "name": "Đỗ xe máy", "desc": "Garage có mái tầng trệt, chỉ dành cho xe máy & xe đạp" },
       { "name": "Bếp mini", "desc": "Tủ lạnh, ấm đun nước & dụng cụ cơ bản" },
