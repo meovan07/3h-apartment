@@ -16,8 +16,8 @@ export default function CityBanner() {
     >
       <section className="relative overflow-hidden py-[148px] md:py-[168px]">
         <Image
-          src="https://images.unsplash.com/photo-1692470909656-260021e020d5?auto=format&fit=crop&w=1800&q=85"
-          alt="Đà Nẵng city aerial view"
+          src="https://images.unsplash.com/photo-1571713343936-b27b7bedddab?auto=format&fit=crop&w=1800&q=85"
+          alt="Dragon Bridge Da Nang at night"
           fill
           className="object-cover object-center"
           sizes="100vw"
