@@ -1,12 +1,18 @@
 import type { Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 
-const dmSans = DM_Sans({
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-dm',
+const inter = Inter({
+  subsets: ['latin', 'latin-ext', 'vietnamese'],
+  variable: '--font-inter',
   display: 'swap',
-  weight: ['400', '500', '600'],
+})
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin', 'latin-ext', 'vietnamese'],
+  variable: '--font-jakarta',
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 export const metadata: Metadata = {
@@ -24,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className={dmSans.variable}>
+    <html lang="vi" className={`${inter.variable} ${jakarta.variable}`}>
       <body className="bg-cream font-sans antialiased">{children}</body>
     </html>
   )

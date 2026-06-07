@@ -34,7 +34,7 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-cream/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(28,25,23,0.08)]'
+          ? 'bg-cream/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(12,31,53,0.08)]'
           : 'bg-cream/80 backdrop-blur-sm'
       }`}
     >

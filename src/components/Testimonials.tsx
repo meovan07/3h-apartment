@@ -40,7 +40,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.6, ease, delay: i * 0.1 }}
-              className="flex flex-col gap-5 bg-cream p-8 shadow-[0_2px_16px_rgba(28,25,23,0.06)]"
+              className="flex flex-col gap-5 bg-cream p-8 shadow-[0_2px_16px_rgba(12,31,53,0.06)]"
             >
               {/* Stars */}
               <div className="flex gap-1">
