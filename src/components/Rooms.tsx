@@ -48,27 +48,29 @@ function RoomCard({
           {floor}
         </span>
       </div>
-      <div className="p-5 flex flex-col gap-3 flex-1">
-        <div>
-          <h3 className="font-serif text-xl font-light text-ink">{name}</h3>
-          <p className="text-[12px] text-muted mt-1 leading-relaxed">{desc}</p>
+      <div className="p-5 flex flex-col flex-1">
+        <div className="flex flex-col gap-3">
+          <div>
+            <h3 className="font-serif text-xl font-light text-ink">{name}</h3>
+            <p className="text-[12px] text-muted mt-1 leading-relaxed">{desc}</p>
+          </div>
+          <div className="flex gap-3 text-[11px] text-muted">
+            <span>{room.size} m²</span>
+            <span className="text-ink/20">·</span>
+            <span>{t('units')} {room.maxGuests}</span>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-[9px] tracking-wide uppercase text-muted border border-ink/10 px-2.5 py-1"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="flex gap-3 text-[11px] text-muted">
-          <span>{room.size} m²</span>
-          <span className="text-ink/20">·</span>
-          <span>{t('units')} {room.maxGuests}</span>
-        </div>
-        <div className="flex flex-wrap gap-1.5">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-[9px] tracking-wide uppercase text-muted border border-ink/10 px-2.5 py-1"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-ink/10">
+        <div className={`flex items-center justify-between pt-3 border-t border-ink/10 ${tall ? 'mt-6' : 'mt-auto'}`}>
           <div>
             <span className="font-serif text-2xl font-light text-ink">
               {formatVND(room.priceVND)}
@@ -146,22 +148,24 @@ export default function Rooms() {
                 {t('rooftop_name')}
               </span>
             </div>
-            <div className="p-5 flex flex-col gap-3">
-              <div>
-                <h3 className="font-serif text-xl font-light text-ink">{t('rooftop_name')}</h3>
-                <p className="text-[12px] text-muted mt-1 leading-relaxed">{t('rooftop_desc')}</p>
+            <div className="p-5 flex flex-col flex-1">
+              <div className="flex flex-col gap-3">
+                <div>
+                  <h3 className="font-serif text-xl font-light text-ink">{t('rooftop_name')}</h3>
+                  <p className="text-[12px] text-muted mt-1 leading-relaxed">{t('rooftop_desc')}</p>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {(t.raw('rooftop_tags') as string[]).map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[9px] tracking-wide uppercase text-muted border border-ink/10 px-2.5 py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-1.5">
-                {(t.raw('rooftop_tags') as string[]).map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[9px] tracking-wide uppercase text-muted border border-ink/10 px-2.5 py-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="pt-3 border-t border-ink/10">
+              <div className="mt-auto pt-3 border-t border-ink/10">
                 <span className="font-serif text-xl font-light text-gold">{t('rooftop_price')}</span>
                 <p className="text-[11px] text-muted mt-0.5">{t('rooftop_subtitle')}</p>
               </div>
