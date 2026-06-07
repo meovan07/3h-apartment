@@ -53,7 +53,7 @@ export default function Location() {
           >
             <div className="flex items-start gap-3">
               <MapPin size={14} className="mt-0.5 shrink-0 text-gold" />
-              <p className="whitespace-pre-line text-[13px] leading-relaxed text-muted">
+              <p className="whitespace-pre-line text-[13px] leading-relaxed text-ink/80">
                 {t('address')}
               </p>
             </div>
@@ -83,18 +83,28 @@ export default function Location() {
             </div>
 
             {/* Map */}
-            <div className="relative h-[260px] w-full overflow-hidden rounded-xl border border-ink/10">
-              <iframe
-                src={MAPS_EMBED}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="3H Apartment location"
-                className="absolute inset-0"
-              />
+            <div className="flex flex-col gap-2">
+              <div className="relative h-[280px] w-full overflow-hidden rounded-xl border border-ink/10">
+                <iframe
+                  src={MAPS_EMBED}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="3H Apartment location"
+                  className="absolute inset-0"
+                />
+              </div>
+              <a
+                href="https://maps.google.com/maps?q=16.040982,108.246670"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-end text-[11px] text-gold hover:underline font-medium"
+              >
+                Open in Google Maps →
+              </a>
             </div>
           </motion.div>
 

@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-ink/10 bg-surface">
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
         <Logo />
 
         <nav className="flex items-center gap-6">
