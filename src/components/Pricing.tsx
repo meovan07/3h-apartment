@@ -16,7 +16,7 @@ export default function Pricing() {
   }
 
   return (
-    <section id="pricing" className="py-20">
+    <section id="pricing" className="py-20 border-t border-ink/8">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -29,68 +29,57 @@ export default function Pricing() {
             <span className="w-5 h-px bg-gold inline-block" />
             {t('eyebrow')}
           </span>
-          <h2 className="font-serif text-[40px] md:text-[48px] font-normal text-ink mt-3 leading-tight">
+          <h2 className="font-serif text-[36px] md:text-[44px] font-bold text-ink mt-3 leading-tight">
             {t('title')}{' '}
             <em className="italic text-gold">{t('titleAccent')}</em>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl overflow-hidden shadow-[0_2px_24px_rgba(15,23,42,0.08)] border border-ink/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 border border-ink/12 rounded-2xl overflow-hidden">
           {pricingTiers.map((tier, i) => {
             const { label, floor, units, features } = tierTranslations[tier.id as 1 | 2 | 3]
 
             return (
               <motion.div
                 key={tier.id}
-                initial={{ opacity: 0, y: 32 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
-                className={`relative flex flex-col p-8 md:p-10 ${
-                  i < pricingTiers.length - 1
-                    ? 'border-b md:border-b-0 md:border-r border-ink/10'
-                    : ''
-                } ${tier.hot ? 'bg-ink text-cream' : 'bg-cream text-ink'}`}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
+                className={`relative flex flex-col p-8 bg-cream ${
+                  i < pricingTiers.length - 1 ? 'border-b md:border-b-0 md:border-r border-ink/12' : ''
+                }`}
               >
+                {/* Popular accent bar */}
                 {tier.hot && (
-                  <span className="self-start mb-4 bg-gold text-cream text-[9px] font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full whitespace-nowrap">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gold rounded-t-2xl" />
+                )}
+
+                {tier.hot && (
+                  <span className="self-start mb-4 bg-gold/10 text-gold text-[9px] font-semibold tracking-wide uppercase px-3 py-1 rounded-full">
                     {t('popular')}
                   </span>
                 )}
 
-                <div className="mb-6">
+                <div className={tier.hot ? '' : 'mt-[28px]'}>
                   <span className="text-[10px] tracking-[2px] uppercase font-semibold text-gold">
                     {label}
                   </span>
-                  <p className={`text-[12px] mt-1.5 ${tier.hot ? 'text-cream/60' : 'text-muted'}`}>
-                    {floor} · {units}
-                  </p>
+                  <p className="text-[12px] mt-1 text-muted">{floor} · {units}</p>
                 </div>
 
-                <div className="mb-8">
-                  <span
-                    className={`font-serif text-[44px] font-normal leading-none ${
-                      tier.hot ? 'text-cream' : 'text-ink'
-                    }`}
-                  >
+                <div className="mt-5 mb-6">
+                  <span className="font-serif text-[40px] font-bold leading-none text-ink">
                     {formatVND(tier.priceVND)}
                   </span>
-                  <span className={`text-[12px] ml-2 ${tier.hot ? 'text-cream/60' : 'text-muted'}`}>
-                    {t('per_night')}
-                  </span>
+                  <span className="text-[12px] ml-1.5 text-muted">{t('per_night')}</span>
                 </div>
 
-                <ul className="flex flex-col gap-3 mb-8 flex-1">
+                <ul className="flex flex-col gap-2.5 mb-7 flex-1">
                   {features.map((f: string) => (
-                    <li key={f} className="flex items-start gap-2.5">
-                      <Check size={13} className="text-gold mt-0.5 shrink-0" strokeWidth={2.5} />
-                      <span
-                        className={`text-[12px] leading-relaxed ${
-                          tier.hot ? 'text-cream/80' : 'text-muted'
-                        }`}
-                      >
-                        {f}
-                      </span>
+                    <li key={f} className="flex items-center gap-2.5">
+                      <Check size={13} className="text-gold shrink-0" strokeWidth={2.5} />
+                      <span className="text-[12px] text-muted">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -99,10 +88,10 @@ export default function Pricing() {
                   onClick={() =>
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                   }
-                  className={`rounded-lg text-[11px] font-semibold tracking-wide px-6 py-3.5 transition-colors duration-300 ${
+                  className={`rounded-lg text-[11px] font-semibold tracking-wide px-6 py-3 transition-colors duration-300 ${
                     tier.hot
-                      ? 'bg-gold text-cream hover:bg-cream hover:text-ink'
-                      : 'border border-ink text-ink hover:bg-ink hover:text-cream'
+                      ? 'bg-gold text-cream hover:bg-ink'
+                      : 'border border-ink/20 text-ink hover:bg-ink hover:text-cream'
                   }`}
                 >
                   {t('cta')}
@@ -112,7 +101,7 @@ export default function Pricing() {
           })}
         </div>
 
-        <p className="text-center text-[11px] text-muted mt-6">{t('note')}</p>
+        <p className="text-center text-[11px] text-muted mt-5">{t('note')}</p>
       </div>
     </section>
   )
