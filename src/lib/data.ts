@@ -38,7 +38,6 @@ export const amenityIcons = [
   'Car',
   'UtensilsCrossed',
   'WashingMachine',
-  'Tv',
   'Sun',
   'PlaneLanding',
   'PawPrint',

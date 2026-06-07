@@ -3,13 +3,13 @@
 import { motion } from 'framer-motion'
 import {
   Wifi, Wind, ArrowUpDown, Car, UtensilsCrossed,
-  WashingMachine, Tv, Sun, PlaneLanding, PawPrint, LucideIcon,
+  WashingMachine, Sun, PlaneLanding, PawPrint, LucideIcon,
 } from 'lucide-react'
 import { amenityIcons } from '@/lib/data'
 import { useTranslations } from 'next-intl'
 
 const iconMap: Record<string, LucideIcon> = {
-  Wifi, Wind, ArrowUpDown, Car, UtensilsCrossed, WashingMachine, Tv, Sun, PlaneLanding, PawPrint,
+  Wifi, Wind, ArrowUpDown, Car, UtensilsCrossed, WashingMachine, Sun, PlaneLanding, PawPrint,
 }
 
 const ease = [0.22, 1, 0.36, 1] as const
