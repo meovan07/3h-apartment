@@ -35,7 +35,7 @@ function RoomCard({
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}
       className="group relative flex flex-col border border-ink/10 overflow-hidden bg-cream hover:border-gold/40 transition-colors duration-300"
     >
-      <div className={`relative bg-dark overflow-hidden ${tall ? 'h-[400px]' : 'h-[200px]'}`}>
+      <div className={`relative bg-dark overflow-hidden ${tall ? 'h-[400px]' : 'h-[160px]'}`}>
         <Image
           src={room.imgSrc}
           alt={name}
@@ -48,10 +48,10 @@ function RoomCard({
           {floor}
         </span>
       </div>
-      <div className="p-5 flex flex-col flex-1">
-        <div className="flex flex-col gap-3">
+      <div className={`flex flex-col flex-1 ${tall ? 'p-5' : 'p-4'}`}>
+        <div className={`flex flex-col ${tall ? 'gap-3' : 'gap-2'}`}>
           <div>
-            <h3 className="font-serif text-xl font-light text-ink">{name}</h3>
+            <h3 className={`font-serif font-light text-ink ${tall ? 'text-xl' : 'text-[17px]'}`}>{name}</h3>
             <p className="text-[12px] text-muted mt-1 leading-relaxed">{desc}</p>
           </div>
           <div className="flex gap-3 text-[11px] text-muted">
@@ -70,7 +70,7 @@ function RoomCard({
             ))}
           </div>
         </div>
-        <div className={`flex items-center justify-between pt-3 border-t border-ink/10 ${tall ? 'mt-6' : 'mt-auto'}`}>
+        <div className={`flex items-center justify-between border-t border-ink/10 ${tall ? 'pt-3 mt-6' : 'pt-2.5 mt-3'}`}>
           <div>
             <span className="font-serif text-2xl font-light text-ink">
               {formatVND(room.priceVND)}
