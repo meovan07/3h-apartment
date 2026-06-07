@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useTransition, useEffect } from 'react'
-import { Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Send, CheckCircle, AlertCircle, ChevronDown } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { submitContactForm } from '@/app/actions/contact'
 
@@ -117,13 +117,14 @@ export default function ContactForm() {
 
       <div>
         <label className={labelClass}>{t('floor')}</label>
-        <select value={form.floor} onChange={set('floor')} className={inputClass}>
-          {floorOptions.map((o) => (
-            <option key={o} value={o}>
-              {o}
-            </option>
-          ))}
-        </select>
+        <div className="relative">
+          <select value={form.floor} onChange={set('floor')} className={`${inputClass} appearance-none pr-7 cursor-pointer`}>
+            {floorOptions.map((o) => (
+              <option key={o} value={o}>{o}</option>
+            ))}
+          </select>
+          <ChevronDown size={13} strokeWidth={1.75} className="absolute right-1 top-1/2 -translate-y-1/2 text-muted pointer-events-none" />
+        </div>
       </div>
 
       <div>
@@ -160,7 +161,7 @@ export default function ContactForm() {
         ) : (
           <>
             {t('submit')}
-            <Send size={12} />
+            <Send size={12} strokeWidth={1.75} />
           </>
         )}
       </button>

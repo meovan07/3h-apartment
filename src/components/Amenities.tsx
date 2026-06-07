@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import {
   Wifi, Wind, ArrowUpDown, Car, UtensilsCrossed,
-  WashingMachine, Sun, PlaneLanding, PawPrint, LucideIcon,
+  WashingMachine, Sun, PlaneLanding, PawPrint, LucideIcon, ArrowRight,
 } from 'lucide-react'
 import { amenityIcons } from '@/lib/data'
 import { useTranslations } from 'next-intl'
@@ -42,9 +42,10 @@ export default function Amenities() {
             <p className="mt-4 text-[13px] leading-relaxed text-muted">{t('body')}</p>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="mt-8 bg-gold px-7 py-3 rounded-lg text-[11px] font-semibold tracking-wide text-cream transition-colors duration-300 hover:bg-ink"
+              className="mt-8 inline-flex items-center gap-2 text-gold text-[13px] font-semibold group hover:gap-3 transition-all duration-200"
             >
               {t('cta')}
+              <ArrowRight size={15} strokeWidth={2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
             </button>
           </motion.div>
 

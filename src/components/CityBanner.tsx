@@ -22,7 +22,8 @@ export default function CityBanner() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-ink/65" />
+        {/* Gradient overlay — lighter in centre to preserve bridge fire, darker at edges */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(5,63,67,0.45) 0%, rgba(5,63,67,0.72) 100%)' }} />
 
         <div className="relative z-10 mx-auto max-w-screen-2xl px-6 md:px-12 text-center">
           <motion.span

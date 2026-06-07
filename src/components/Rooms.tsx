@@ -65,7 +65,7 @@ function RoomCard({
 
         {/* Name + specs */}
         <div className="border-t border-ink/8 pt-4">
-          <h3 className="font-serif text-[20px] font-normal text-ink leading-tight mb-3">{name}</h3>
+          <h3 className="font-serif text-[21px] font-bold text-ink leading-tight mb-2">{name}</h3>
           <div className="flex gap-4 text-[11px] text-muted mb-3">
             <span className="flex items-center gap-1.5">
               <Maximize2 size={11} className="text-gold" strokeWidth={2} />
@@ -76,7 +76,7 @@ function RoomCard({
               {t('guests_count', { count: room.maxGuests })}
             </span>
           </div>
-          <p className="text-[12px] text-muted leading-relaxed">{desc}</p>
+          <p className="text-[11px] text-muted/70 leading-relaxed">{desc}</p>
         </div>
 
         {/* Tags */}

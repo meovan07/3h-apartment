@@ -91,7 +91,7 @@ export default function Pricing() {
                   className={`rounded-lg text-[11px] font-semibold tracking-wide px-6 py-3 transition-colors duration-300 ${
                     tier.hot
                       ? 'bg-gold text-cream hover:bg-ink'
-                      : 'border border-ink/20 text-ink hover:bg-ink hover:text-cream'
+                      : 'border border-gold/40 text-gold bg-gold/5 hover:bg-gold hover:text-cream hover:border-gold'
                   }`}
                 >
                   {t('cta')}
