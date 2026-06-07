@@ -1,9 +1,12 @@
+@import '@fontsource-variable/source-serif-4';
+@import '@fontsource-variable/source-serif-4/wght-italic.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-fraunces: 'Source Serif 4 Variable', Georgia, serif;
   --font-dm: 'DM Sans', system-ui, sans-serif;
 }
 
